@@ -1,0 +1,80 @@
+@import "variables";
+
+.footer {
+  padding: 70px 0 50px;
+  background-color: #434245;
+  color: $clr-light;
+  line-height: 28px;
+
+
+  &__contacts {
+
+    a {
+      font-weight: 700;
+      color: $clr-light;
+      margin-left: 7px;
+    }
+  }
+
+  &__nav {
+
+    &__list {
+      width: 110px;
+      margin: 0 40px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__item {
+      font-weight: 300;
+      line-height: 22px;
+      margin-bottom: 7px;
+
+      a {
+        color: $clr-light;
+        padding-bottom: 1px;
+        background-image: linear-gradient(transparent calc(100% - 1px), $clr-accent 1px);
+        transition: $fnc-line;
+
+        &:hover {
+          color: $clr-accent;
+        }
+
+        &.bold {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  &__copy {
+    text-align: right;
+
+    p {
+      margin-top: 0;
+    }
+
+    .copy {
+      font-weight: 300;
+    }
+
+    .policy {
+      color: $clr-light;
+      font-weight: 300;
+      padding-bottom: 9px;
+      display: inline-block;
+    }
+
+    .creator {
+      color: $clr-light;
+
+      span {
+        color: $clr-accent;
+        display: inline-block;
+        margin-left: 5px;
+      }
+    }
+  }
+}

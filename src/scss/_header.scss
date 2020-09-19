@@ -1,8 +1,10 @@
 @import "variables";
 
 .header {
+  z-index: 99;
+
   .container {
-    max-width: 1210px;
+    max-width: 1180px;
   }
 
   &__top {
@@ -162,7 +164,7 @@
           .products__dropdown {
             box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.15);
             border: 2px solid #eee;
-            background-color: #fff;
+            background-color: $clr-light ;
             &.mortar {
               max-height: 179px;
             }

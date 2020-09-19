@@ -1,0 +1,111 @@
+@import "variables";
+
+.news-list {
+  margin-bottom: 77px;
+
+  &__title {
+    text-align: right;
+    margin-bottom: 27px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.07px;
+
+    a {
+      color: $clr-font;
+      background-image: linear-gradient(transparent calc(100% - 1px), $clr-accent 1px);
+      transition: $fnc-line;
+
+      &:hover {
+        color: $clr-accent;
+      }
+    }
+  }
+
+
+  &__card {
+    height: 313px;
+    width: 263px;
+
+    &:hover {
+      .news-list__desc::after {
+        opacity: 1;
+      }
+
+      .news-list__date,
+      .news-list__caption {
+        color: $clr-light;
+      }
+
+    }
+  }
+
+  &__pic {
+    height: 143px;
+    width: 250px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px -8px 0px 0px rgba(238,238,238,1),
+                0px -17px 0px 0px rgba(246,246,246,1);
+  }
+
+  &__desc {
+    width: 263px;
+    height: 151px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &::before {
+      background-image: url("/img/news-card-back.jpg");
+      opacity: 0.2;
+      z-index: 1;
+    }
+
+    &::after {
+      background-color: #434245;
+      z-index: 2;
+      opacity: 0;
+      transition: $fnc-line;
+    }
+  }
+
+  &__date {
+    color: $clr-font;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 28px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    padding-top: 14px;
+    padding-bottom: 6px;
+  }
+
+  &__caption {
+    color: $clr-font;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.07px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    padding: 0 50px;
+  }
+}
