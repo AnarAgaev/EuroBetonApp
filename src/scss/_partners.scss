@@ -1,0 +1,60 @@
+@import "variables";
+
+.partners {
+  padding-top: 75px;
+  padding-bottom: 91px;
+
+  &__title {
+    font-family: $fnt-secondary;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1.05px;
+    text-align: center;
+    padding-bottom: 56px;
+  }
+
+  //- В каждом слайдер своя высота области видимости
+  .slider__viewport {
+    height: 66px;
+
+    &::before, &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 3px;
+      height: 100%;
+      background-color: white;
+      top: 0;
+      z-index: 1;
+    }
+
+    &::before {
+      left: -1px;
+    }
+
+    &::after {
+      right: -1px;
+    }
+  }
+
+  //- В каждом слайдер свои стили для отдельного слайда
+  .slider__item {
+    width: 285px;
+    height: 66px;
+    position: relative;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+
+    img {
+      display: block;
+      position: absolute;
+      max-width: 90%;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+
+}

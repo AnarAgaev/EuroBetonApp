@@ -1,0 +1,130 @@
+@import "variables";
+
+.prices {
+  padding: 74px 0 75px;
+
+  &__title {
+    font-family: $fnt-secondary;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1.05px;
+    text-align: center;
+    padding-bottom: 14px;
+  }
+
+  &__link {
+    text-align: right;
+    margin-bottom: 12px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: .07px;
+
+    a {
+      color: $clr-font;
+      background-image: linear-gradient(transparent calc(100% - 1px), $clr-accent 1px);
+      transition: $fnc-line;
+      right: 1px;
+      position: relative;
+
+      &:hover {
+        color: $clr-accent;
+      }
+    }
+
+  }
+
+  //- В каждом слайдер своя высота области видимости
+  .slider__viewport {
+    height: 387px;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 3px;
+      height: 100%;
+      background-color: white;
+      top: 0;
+      z-index: 1;
+    }
+
+    &::after {
+      right: -1px;
+    }
+  }
+
+  //- В каждом слайдер свои стили для отдельного слайда
+  .slider__item {
+    width: 286px;
+    height: 387px;
+    border: 2px solid #e3e3e3;
+    padding: 0 15px;
+
+    &:nth-child(n+1) {
+      margin-right: -2px;
+    }
+  }
+
+  &__pic {
+    width: 209px;
+    height: 106px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 33px;
+  }
+
+  &__caption  {
+    color: $clr-accent;
+    font-family: $fnt-secondary;
+    font-weight: 400;
+    padding-top: 27px;
+    padding-bottom: 1px;
+  }
+
+  &__desc {
+    font-family: $fnt-secondary;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-top: 21px;
+    padding-bottom: 32px;
+
+    span {
+      font-size: 30px;
+      font-weight: 700;
+      display: inline-block;
+      padding: 0 3px 0 5px;
+    }
+  }
+
+  &__btn {
+    a {
+      width: 209px;
+      height: 53px;
+      background-color: #eeeeee;
+      color: $clr-font;
+      font-family: $fnt-secondary;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 53px;
+      padding: 0;
+      text-align: center;
+      box-shadow: none;
+      background-image: none;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+}

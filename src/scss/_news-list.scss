@@ -5,7 +5,7 @@
 
   &__title {
     text-align: right;
-    margin-bottom: 27px;
+    margin-bottom: 28px;
     font-weight: 500;
     line-height: 28px;
     letter-spacing: 0.07px;
@@ -14,6 +14,8 @@
       color: $clr-font;
       background-image: linear-gradient(transparent calc(100% - 1px), $clr-accent 1px);
       transition: $fnc-line;
+      right: 7px;
+      position: relative;
 
       &:hover {
         color: $clr-accent;
@@ -45,8 +47,8 @@
     left: 50%;
     position: relative;
     transform: translateX(-50%);
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
     background-size: cover;
     background-position: center;
     box-shadow: 0px -8px 0px 0px rgba(238,238,238,1),
@@ -73,7 +75,7 @@
 
     &::before {
       background-image: url("/img/news-card-back.jpg");
-      opacity: 0.2;
+      opacity: 0.4;
       z-index: 1;
     }
 

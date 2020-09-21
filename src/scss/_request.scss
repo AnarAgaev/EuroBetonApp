@@ -1,0 +1,41 @@
+@import "variables";
+
+.request {
+  background-color: #434245;
+  padding: 73px 0 0;
+  margin-bottom: 75px;
+  position: relative;
+
+  &__desc {
+    padding-left: 37px;
+  }
+
+  &__pic {
+    img {
+      display: inline-block;
+      position: absolute;
+      left: 131px;
+      bottom: 0;
+    }
+  }
+
+  &__title {
+    color: white;
+    font-family: $fnt-secondary;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 26px;
+    margin-bottom: 31px;
+  }
+
+  &__content {
+    color: white;
+    line-height: 26px;
+    width: 421px;
+    padding-bottom: 25px;
+  }
+
+  &__btn {
+    margin-bottom: 75px;
+  }
+}

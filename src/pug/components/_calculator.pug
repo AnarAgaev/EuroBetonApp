@@ -1,0 +1,149 @@
+section.calculator
+    .calculator
+        .calculator__title.d-flex.align-items-center.justify-content-center РАССЧИТАТЬ ЦЕНУ БЕТОНА С ДОСТАВКОЙ
+
+        form.calculator__form
+            .container
+                .calculator__form_place.d-flex.align-items-end
+                    .calculator__form__title Место и время доставки
+                    label.label.label_xl
+                        span Адрес доставки:
+                        input(type="text" placeholder="Россия, Московская область, сельский посёлок Карачиха")
+
+                    label.label.label_md
+                        span Дата доставки:
+                        input(type="text" placeholder="Не указана")
+
+                    label.label.label_check.d-flex.align-items-center
+                        span Самовывоз
+                        input(type="checkbox" value="true" name="takeself" checked)
+                        .checker
+
+                    label.label.label_sm
+                        span Выберите завод:
+                        input(type="text" placeholder="Не указан")
+
+                .calculator__form_parametrs
+                    .calculator__form__title Основные параметры бетона:
+                    .group-one
+                        label.label.label_xl.label_select
+                            span Марка:
+                            select
+                                option(value="") Не указана
+                                option Пункт 1
+                                option Пункт 2
+                                option Пункт 3
+
+                        label.label.label_md.label_select
+                            span Прочность (кгс/см
+                                sup 2
+                                | ):
+                            select
+                                option(value="") Не указана
+                                option Пункт 1
+                                option Пункт 2
+                                option Пункт 3
+
+                        label.label.label_lg.label_select
+                            span Наполнитель:
+                            select
+                                option(value="") Не указана
+                                option Пункт 1
+                                option Пункт 2
+                                option Пункт 3
+
+                        label.label.label_value
+                            span Объём (м
+                                sup 3
+                                | ):
+                            .value-checker
+                                .value-checker__btn.value-checker__btn_minus
+                                input(type="text" value="0" readonly)
+                                .value-checker__btn.value-checker__btn_plus
+
+
+                    .group-additive
+                        .tglr
+                            b Добавки
+                            | (выберите при необходиости):
+
+                    .group-two
+                        label.label.label_xs.label_select
+                            span Морозостойкость:
+                            select
+                                option(value="") Не указана
+                                option Пункт 1
+                                option Пункт 2
+                                option Пункт 3
+
+                        label.label.label_xxs.label_select
+                            span Подвижность:
+                            select
+                                option(value="") Не указана
+                                option Пункт 1
+                                option Пункт 2
+                                option Пункт 3
+
+                        label.label.label_md.label_select
+                            span Водонепроницаемость:
+                            select
+                                option(value="") Не указана
+                                option Пункт 1
+                                option Пункт 2
+                                option Пункт 3
+
+                        label.label.label_xs.label_select
+                            span Противоморозные доб.:
+                            select
+                                option(value="") Не указана
+                                option Пункт 1
+                                option Пункт 2
+                                option Пункт 3
+
+                        label.label.label_sm.label_select
+                            span Фибра:
+                            select
+                                option(value="") Не указана
+                                option Пункт 1
+                                option Пункт 2
+                                option Пункт 3
+
+                    .btn-form-send
+                        span добавить товар
+                .calculator__form_comments.d-flex.justify-content-between
+                        div.d-flex
+                            .calculator__form_comments-text
+                                .title Комментарий к заказу:
+                                textarea(placeholder="Начните вводить ...")
+                            .calculator__form_comments-technics
+                                .title Аренда техники:
+                                label.label.label_check.d-flex.align-items-center
+                                    span Бетононасос
+                                    input(type="checkbox" value="true" name="pump" checked)
+                                    .checker
+                                label.label.label_check.d-flex.align-items-center
+                                    span Кран
+                                    input(type="checkbox" value="true" name="crane")
+                                    .checker
+                        .calculator__form_comments-offer.d-flex.flex-column.align-items-center
+                            .title
+                                b Набрал свыше 300 кубов?
+                                | Тогда получай
+                            a.btn(href="") Персональное предложение
+
+
+
+        .calculator__resaults-wrap.d-flex.justify-content-center.align-items-center
+            .calculator__resaults.d-flex.align-items-center
+                .calculator__resaults-btn
+                    a.btn(href="") добавить в корзину
+                .calculator__resaults-price.d-flex.align-items-center
+                    div
+                        | Итого:
+                        span 3000
+                        | руб.
+                .calculator__resaults-comments
+                    .calculator__resaults-delivery Стоимость доставки:
+                        span Не выбран адрес доставки
+                    .calculator__resaults-concrete Стоимость бетона:
+                        span Укажите параметры
