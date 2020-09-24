@@ -6,13 +6,19 @@
 
   &__title {
     font-family: $fnt-secondary;
-    font-size: 42px;
     font-weight: 900;
     line-height: 26px;
     text-transform: uppercase;
-    letter-spacing: 1.05px;
     text-align: center;
-    padding-bottom: 56px;
+    padding-bottom: 20px;
+    font-size: 26px;
+    letter-spacing: 0.65px;
+
+    @media (min-width: $lg) {
+      font-size: 42px;
+      letter-spacing: 1.05px;
+      padding-bottom: 56px;
+    }
   }
 
   //- В каждом слайдер своя высота области видимости
@@ -50,10 +56,27 @@
     img {
       display: block;
       position: absolute;
-      max-width: 90%;
+      max-width: 60%;
       top: 50%;
       left: 50%;
       transform: translateY(-50%) translateX(-50%);
+
+      @media (min-width: $lg) {
+        max-width: 90%;
+      }
+    }
+  }
+
+  .slider {
+    margin: 0 auto;
+    @media (max-width: 1400px) {
+      width: 855px;
+    }
+    @media (max-width: $xl - 1) {
+      width: 570px;
+    }
+    @media (max-width: $lg - 1) {
+      width: 285px;
     }
   }
 

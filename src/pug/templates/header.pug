@@ -1,46 +1,54 @@
 .header__top
     .container
-        .header__top__wrap.row.d-flex.justify-content-between.align-items-center
-            .d-flex.align-items-center
-                .region.d-flex.flex-column.align-items-start
-                    .region__caption Ваш регион:
-                    .region__description Москва
+        #headerTop.header__top__wrap.row.d-flex.justify-content-between.align-items-center
+            .header__top__body.d-flex.align-items-center.justify-content-between
+                #navTgglr.nav-tglr
+                    .nav-tglr__burger
 
-                nav.nav
-                    ul.nav__list.d-flex.justify-content-between
-                        li.nav__item
+                #region.region.d-flex.flex-md-column.align-items-md-start
+                    .region__map-marker.d-md-none
+                        img(src="/img/map-marker-alt-solid.svg" alt="" title="")
+                    .region__caption.d-none.d-md-block Ваш регион:
+                    .region__description Ярославль
+
+                nav.nav#headerTopNav
+                    ul.nav__list.d-flex
+                        li.nav__item.d-flex.align-items-center
                             a.nav__link.drop(href="#") О компании
-                        li.nav__item
+                        li.nav__item.d-flex.align-items-center
                             a.nav__link.drop(href="#") Продукция
-                        li.nav__item
+                        li.nav__item.d-flex.align-items-center
                             a.nav__link.drop(href="#") Производство
-                        li.nav__item
+                        li.nav__item.d-flex.align-items-center
                             a.nav__link.drop(href="#") Аренда
-                        li.nav__item
+                        li.nav__item.d-flex.align-items-center
                             a.nav__link(href="#") Доставка
-                        li.nav__item
+                        li.nav__item.d-flex.align-items-center
                             a.nav__link(href="#") Тендеры
-                        li.nav__item
+                        li.nav__item.d-flex.align-items-center
                             a.nav__link(href="#") Контакты
 
-            .cart.d-flex.justify-content-end.align-items-center
+                .phone#headerPhoneBtn
+                    img(src="/img/phone-alt-solid.svg" alt="" title="")
+
+            #cart.cart.d-flex.justify-content-end.align-items-center
                 .cart__caption Корзина
                 .cart__items
                     .cart__items__num 5
 
-.header__bottom
-    .container
-        .header__bottom__wrap.row.d-flex.justify-content-between.align-items-center
+.header__bottom#headerBottomContainer
+    .container.header__bottom__container
+        #headerBottom.headerBottom.header__bottom__wrap.d-flex.justify-content-between.align-items-center
 
-           a.logo(href="/")
-               img.logo(src="/img/logo.png")
+           a.logo(href="/")#logo
+               img.logo(src="/img/logo.svg" alt="главная" title="главная")
 
-           .products
+           #nav.products.d-flex.flex-column
                ul.products__list.d-flex
                    li.drop.products__item
                        a.products__link.drop(href="/") Бетон
-                       .products__dropdown.mortar.d-flex.justify-content-center.align-items-center
-                           ul.dropdown-list
+                       .products__dropdown.concrete.d-flex.justify-content-center.align-items-center
+                           ul.dropdown-list.d-flex.flex-column
                                li.dropdown__item
                                  a.dropdown__link(href="/") БЕТОН М100 (В7,5)
                                li.dropdown__item
@@ -49,7 +57,7 @@
                                  a.dropdown__link(href="/") БЕТОН М200 (В15)
                                li.dropdown__item
                                  a.dropdown__link(href="/") БЕТОН М250 (В20)
-                           ul.dropdown-list
+                           ul.dropdown-list.d-flex.flex-column
                                li.dropdown__item
                                  a.dropdown__link(href="/") БЕТОН М300 (В22,5)
                                li.dropdown__item
@@ -58,7 +66,7 @@
                                  a.dropdown__link(href="/") БЕТОН М400 (В30)
                                li.dropdown__item
                                  a.dropdown__link(href="/") БЕТОН М450 (В35)
-                           ul.dropdown-list
+                           ul.dropdown-list.d-flex.flex-column
                                li.dropdown__item
                                  a.dropdown__link(href="/") БЕТОН М550 (В40)
                                li.dropdown__item
@@ -67,7 +75,7 @@
                                  a.dropdown__link(href="/") БЕТОН М700 (В50)
                                li.dropdown__item
                                  a.dropdown__link(href="/") БЕТОН М800 (В60)
-                           ul.dropdown-list
+                           ul.dropdown-list.d-flex.flex-column
                                li.dropdown__item
                                  a.dropdown__link(href="/") РАСТВОР БЕТОНА
                                li.dropdown__item
@@ -79,10 +87,17 @@
 
                    li.drop.products__item
                        a.products__link.drop(href="/") Щебень
+                       .products__dropdown.rubble.d-flex.justify-content-center.align-items-center
+                           ul.dropdown-list.d-flex.flex-column
+                               li.dropdown__item
+                                   a.dropdown__link(href="/") Гранитный щебень
+                               li.dropdown__item
+                                   a.dropdown__link(href="/") Доломитовый щебень
+
                    li.products__item
                        a.products__link(href="/") Минеральный порошок
 
-           .operating.d-flex.flex-column.align-items-end
+           #operating.operating.d-flex.flex-column.align-items-center.align-items-md-end.justify-content-center
                .operating__worktime Работаем: 24/7
                .operating__phone
                    a.phone(href="tel:84957953018") +7 (495) 795-30-18

@@ -1,10 +1,14 @@
 @import "variables";
 
 .advantages {
-
+  margin-top: 40px;
   position: relative;
-  padding: 49px 0 42px;
+  padding: 50px 0;
   background-color: #eee;
+
+  @media (min-width: $sm) {
+    margin-top: 0;
+  }
 
   &:before {
     content: "";
@@ -34,6 +38,26 @@
     line-height: 26px;
     text-align: center;
     z-index: 5;
-    padding: 0 35px;
+    //padding: 0 35px;
+    width: 250px;
+  }
+
+  &__card-wrap {
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    @media (min-width: $md) {
+      &:nth-last-child(2) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 0;
+    }
+
   }
 }

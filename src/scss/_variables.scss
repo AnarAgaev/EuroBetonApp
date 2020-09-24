@@ -4,17 +4,19 @@ $fnc-animation               : all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
 $fnc-line                    : all .3s;
 
 // Colors
-$clr-font               : #000;
-$clr-accent             : #f1852c;
-$clr-light              : #fff;
+$clr-font                   : #000;
+$clr-accent                 : #f1852c;
+$clr-light                  : #fff;
 
 
 // Fonts
-$fnt-main                     : 'Roboto', sans-serif;;
-$fnt-secondary                : 'Source Sans Pro', sans-serif;;
+$fnt-main                   : 'Roboto', sans-serif;;
+$fnt-secondary              : 'Source Sans Pro', sans-serif;;
 
 
 // Media quires
-$screen-large                 : 1440px;
-$screen-medium                : 1024px;
-$screen-small                 : 768px;
+$xxl                        : 1250px;
+$xl                         : 1200px;
+$lg                         : 992px;
+$md                         : 768px;
+$sm                         : 576px;

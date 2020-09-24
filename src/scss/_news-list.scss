@@ -12,10 +12,10 @@
 
     a {
       color: $clr-font;
-      background-image: linear-gradient(transparent calc(100% - 1px), $clr-accent 1px);
       transition: $fnc-line;
       right: 7px;
       position: relative;
+      border-bottom: 1px solid $clr-accent;
 
       &:hover {
         color: $clr-accent;

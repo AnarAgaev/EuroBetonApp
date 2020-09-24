@@ -2,40 +2,93 @@
 
 .request {
   background-color: #434245;
-  padding: 73px 0 0;
+  padding: 25px 0 0;
   margin-bottom: 75px;
   position: relative;
+  overflow-x: hidden;
+
+  @media (min-width: $md) {
+    padding: 73px 0 0;
+  }
+
+  @media (min-width: $lg) {
+    overflow-x: initial;
+  }
 
   &__desc {
     padding-left: 37px;
   }
 
   &__pic {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @media (min-width: $lg) {
+      position: relative;
+      left: auto;
+      bottom: auto;
+    }
+
     img {
+      width: 84px;
+      left: -14px;
       display: inline-block;
       position: absolute;
-      left: 131px;
       bottom: 0;
+
+      @media (min-width: $md) {
+        left: auto;
+        width: 170px;
+        right: -23px;
+        transform: scale(-1, 1);
+      }
+
+      @media (min-width: $lg) {
+        width: auto;
+        left: 131px;
+        right: auto;
+        transform: none;
+      }
     }
   }
 
   &__title {
     color: white;
     font-family: $fnt-secondary;
-    font-size: 42px;
     font-weight: 900;
-    line-height: 26px;
-    margin-bottom: 31px;
+    margin-bottom: 6px;
+    font-size: 26px;
+    line-height: 40px;
+
+    @media (min-width: $md) {
+      font-size: 37px;
+      line-height: 26px;
+      margin-bottom: 31px;
+    }
+    @media (min-width: $xl) {
+      font-size: 42px;
+    }
   }
 
   &__content {
     color: white;
     line-height: 26px;
-    width: 421px;
-    padding-bottom: 25px;
+    padding-bottom: 37px;
+
+    @media (min-width: $md) {
+      width: 421px;
+      padding-bottom: 25px;
+    }
   }
 
   &__btn {
-    margin-bottom: 75px;
+    text-align: right;
+    margin-bottom: 65px;
+
+    @media (min-width: $md) {
+      text-align: left;
+      margin-bottom: 75px;
+    }
   }
 }
