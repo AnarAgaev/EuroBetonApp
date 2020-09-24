@@ -5,11 +5,21 @@
 
   &__title {
     text-align: right;
-    margin-bottom: 28px;
+    margin: 0 auto 28px;
     font-weight: 500;
     line-height: 28px;
     letter-spacing: 0.07px;
-
+    width: 260px;
+    
+    @media (min-width: $md) {
+      width: 620px;
+    }
+    @media (min-width: $lg) {
+      width: 730px;
+    }
+    @media (min-width: $xl) {
+      width: 100%;
+    }
     a {
       color: $clr-font;
       transition: $fnc-line;
@@ -27,6 +37,7 @@
   &__card {
     height: 313px;
     width: 263px;
+    margin-bottom: 34px;
 
     &:hover {
       .news-list__desc::after {

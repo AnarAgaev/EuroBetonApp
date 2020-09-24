@@ -4,16 +4,34 @@
   margin-bottom: 36px;
 
   &__cards {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    @media (min-width: $lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    @media (min-width: $xl) {
+      order: 1;
+      display: block;
+    }
   }
 
   &__card {
-    width: 359px;
+    width: 277px;
     height: 201px;
     border-radius: 15px;
     display: block;
     overflow: hidden;
     position: relative;
+
+    @media (min-width: $md) {
+      width: 359px;
+    }
 
     &:first-child {
       margin-bottom: 24px;
@@ -62,44 +80,86 @@
       line-height: 26px;
       letter-spacing: 0.07px;
       text-align: center;
-      padding: 0 70px;
+      padding: 0 40px;
       margin-top: 8px;
+
+      @media (min-width: $lg) {
+        padding: 0 70px;
+      }
     }
 
   }
 
   &__banner {
+    order: 1;
+    margin-bottom: 34px;
+
+    @media (min-width: $xl) {
+      order: 2;
+    }
 
     &__body {
-      width: 752px;
-      height: 426px;
+      width: 100%;
       border-radius: 15px;
       border: 2px solid #eeeeee;
       background-color: #ffffff;
-      padding-left: 81px;
-      padding-top: 47px;
+      padding-top: 25px;
+      padding-left: 25px;
+      padding-right: 14px;
+
+      @media (min-width: $md) {
+        height: 426px;
+        padding-left: 40px;
+        padding-top: 47px;
+      }
+
+      @media (min-width: $lg) {
+        padding-left: 81px;
+      }
+
+      @media (min-width: $xl) {
+        width: 752px;
+      }
     }
 
     &__title {
       color: $clr-font;
       font-family: $fnt-secondary;
-      font-size: 42px;
       font-weight: 900;
-      line-height: 60px;
-      padding-bottom: 18px;
+      padding-bottom: 9px;
+      font-size: 26px;
+      line-height: 40px;
+
+      @media (min-width: $md) {
+        font-size: 42px;
+        line-height: 60px;
+        padding-bottom: 18px;
+      }
     }
 
     &__list {
       padding-left: 2px;
+      flex-direction: column;
+
+      @media (min-width: $md) {
+        flex-direction: row;
+      }
     }
 
     &__item {
       color: #727272;
       font-size: 15px;
       font-weight: 400;
-      line-height: 36px;
+      line-height: 18px;
       padding-left: 10px;
       position: relative;
+      margin-bottom: 15px;
+
+      @media (max-width: $md) {
+        line-height: 36px;
+        margin-bottom: 0;
+      }
+
 
       &::before {
         content: "";
@@ -110,8 +170,12 @@
         background-color: $clr-accent;
         position: absolute;
         left: 0;
-        top: 50%;
+        top: 18px;
         transform: translateY(-50%);
+
+        @media (min-width: $md) {
+          top: 50%;
+        }
       }
     }
 
@@ -122,8 +186,25 @@
     }
 
     &__btn {
-      margin-top: 37px;
-      margin-left: 8px;
+      margin: 23px 0 38px -14px;
+
+      @media (min-width: $md) {
+        margin: 37px 0 0 8px;
+      }
+
+      .btn {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        text-align: center;
+
+        @media (min-width: $md) {
+          width: auto;
+          padding-left: 50px;
+          padding-right: 50px;
+
+        }
+      }
     }
   }
 }
