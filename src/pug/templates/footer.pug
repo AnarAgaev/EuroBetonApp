@@ -1,6 +1,6 @@
 .container
-    .row
-        .footer__contacts.col-xl-3
+    .row.d-flex
+        .footer__contacts.col-md-6.col-xl-3
             .span.company АО «ЕВРОБЕТОН»
             p
                 | 123308, Россия, г. Москва, 3-й
@@ -11,8 +11,8 @@
                 | Email:
                 a(href="mailto:eurobeton@eurocem.ru") eurobeton@eurocem.ru
 
-        .footer__nav.col-xl-6.d-flex.justify-content-center
-            .ul.footer__nav__list
+        .footer__nav.col-md-12.col-xl-6.d-flex.flex-wrap.flex-lg-nowrap.justify-content-lg-between
+            .ul.footer__nav__list.section1
                 li.footer__nav__item.mb-4
                     a(href="").nav__link.bold Продукция
                 li.footer__nav__item
@@ -22,7 +22,7 @@
                 li.footer__nav__item
                     a(href="").nav__link Минеральный порошок
 
-            .ul.footer__nav__list
+            .ul.footer__nav__list.section2
                 li.footer__nav__item.mb-4
                     a(href="").nav__link.bold Произвоство
                 li.footer__nav__item
@@ -32,7 +32,7 @@
                 li.footer__nav__item
                     a(href="").nav__link Дилерам
 
-            .ul.footer__nav__list
+            .ul.footer__nav__list.section3.d-flex.flex-wrap.flex-lg-column
                 li.footer__nav__item
                     a(href="").nav__link.bold Доставка
                 li.footer__nav__item
@@ -42,7 +42,7 @@
                 li.footer__nav__item
                     a(href="").nav__link.bold Вакансии
 
-        .footer__copy.col-xl-3.d-flex.flex-column.align-items-end
+        .footer__copy.col-md-6.col-xl-3.d-flex.flex-column.align-items-lg-end
             p
                 span.copy
                     | © 2000–2020, «Евробетон».
@@ -50,6 +50,6 @@
                     | Все права защищены
                 br
                 a(href="").policy Политика конфиденциальности
-            a(href="").creator
+            a(href="").creator.d-flex.align-items-center.justify-content-center.justify-content-md-start
                 | Задизайнено студией
                 span MyWeb

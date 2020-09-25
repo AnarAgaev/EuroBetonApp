@@ -4,7 +4,7 @@ section.calculator
 
         form.calculator__form
             .container
-                .calculator__form_place.d-flex.align-items-end
+                .calculator__form_place.d-flex.align-items-lg-end.flex-column.align-items-start.flex-lg-row
                     .calculator__form__title Место и время доставки
                     label.label.label_xl
                         span Адрес доставки:
@@ -110,8 +110,8 @@ section.calculator
 
                     .btn-form-send
                         span добавить товар
-                .calculator__form_comments.d-flex.justify-content-between
-                        div.d-flex
+                .calculator__form_comments.d-flex.justify-content-between.flex-wrap
+                        .d-flex.flex-column.wrapper.flex-xl-row
                             .calculator__form_comments-text
                                 .title Комментарий к заказу:
                                 textarea(placeholder="Начните вводить ...")
@@ -134,7 +134,7 @@ section.calculator
 
 
         .calculator__resaults-wrap.d-flex.justify-content-center.align-items-center
-            .calculator__resaults.d-flex.align-items-center
+            .calculator__resaults.d-flex.align-items-center.flex-column.flex-xl-row
                 .calculator__resaults-btn
                     a.btn(href="") добавить в корзину
                 .calculator__resaults-price.d-flex.align-items-center

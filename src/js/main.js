@@ -96,6 +96,8 @@ document.addEventListener("DOMContentLoaded",() => {
     body
       .classList
       .remove('nav-visible');
+
+    closeAccordion();
   };
   headerPhoneBtn.addEventListener('click', toggleHeaderPhone);
 
@@ -111,6 +113,12 @@ document.addEventListener("DOMContentLoaded",() => {
       .classList
       .remove('phone-visible');
 
+    closeAccordion();
+  };
+  navTgglr.addEventListener('click', toggleHeaderNav);
+
+
+  const closeAccordion =  () => {
     for (let j = 0; j < dropLinks.length; ++j) {
       dropLinks[j]
         .parentElement
@@ -118,9 +126,6 @@ document.addEventListener("DOMContentLoaded",() => {
         .remove('visible');
     }
   };
-  navTgglr.addEventListener('click', toggleHeaderNav);
-
-
 
 
 // Replace cart at the header on mobile screen
@@ -191,12 +196,7 @@ document.addEventListener("DOMContentLoaded",() => {
         const prntClasses = event.target.parentElement.classList;
         const isVisible = prntClasses.contains('visible');
 
-        for (let j = 0; j < dropLinks.length; ++j) {
-          dropLinks[j]
-            .parentElement
-            .classList
-            .remove('visible');
-        }
+        closeAccordion();
 
         isVisible
           ? prntClasses.remove('visible')

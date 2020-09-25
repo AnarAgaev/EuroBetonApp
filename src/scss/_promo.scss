@@ -3,6 +3,10 @@
 .promo {
   margin-bottom: 36px;
 
+  @media (min-width: $xl) {
+    margin-bottom: 2px;
+  }
+
   &__cards {
     order: 2;
     display: flex;

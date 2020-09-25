@@ -78,6 +78,22 @@
     @media (max-width: $lg - 1) {
       width: 285px;
     }
+
+    &__controller {
+      @media (max-width: $sm - 1) {
+        &_left {
+          left: -7px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &_right {
+          left: auto;
+          right: -5px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
   }
 
 }

@@ -1,7 +1,8 @@
 @import "variables";
 
 .news-list {
-  margin-bottom: 77px;
+
+  padding-bottom: 23px;
 
   &__title {
     text-align: right;
@@ -32,7 +33,6 @@
       }
     }
   }
-
 
   &__card {
     height: 313px;
