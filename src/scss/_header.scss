@@ -629,7 +629,7 @@
   height: 80px;
   background-color: #eeeeee;
   transition: $fnc-line;
-  z-index: -1;
+  z-index: 999;
 
   @media (min-width: $md) {
     position: relative;
