@@ -1,22 +1,11 @@
 @import "variables";
 
 .partners {
-  padding-top: 75px;
-  padding-bottom: 91px;
 
   &__title {
-    font-family: $fnt-secondary;
-    font-weight: 900;
-    line-height: 26px;
-    text-transform: uppercase;
-    text-align: center;
     padding-bottom: 20px;
-    font-size: 26px;
-    letter-spacing: 0.65px;
 
     @media (min-width: $lg) {
-      font-size: 42px;
-      letter-spacing: 1.05px;
       padding-bottom: 56px;
     }
   }

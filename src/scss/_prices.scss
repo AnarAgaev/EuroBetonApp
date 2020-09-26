@@ -1,21 +1,12 @@
 @import "variables";
 
 .prices {
-  padding: 74px 0 75px;
 
   &__title {
-    font-family: $fnt-secondary;
-    font-weight: 900;
-    line-height: 26px;
-    text-transform: uppercase;
-    text-align: center;
     padding-bottom: 14px;
-    font-size: 26px;
-    letter-spacing: 0.65px;
 
     @media (min-width: $lg) {
-      font-size: 42px;
-      letter-spacing: 1.05px;
+
     }
   }
 
@@ -144,6 +135,14 @@
     }
   }
 
+  &__slider {
+    padding-bottom: 62px;
+
+    @media (min-width: $sm) {
+      padding-bottom: 0;
+    }
+  }
+
   .slider {
     margin: 0 auto;
     @media (max-width: 1400px) {
@@ -156,5 +155,4 @@
       width: 288px;
     }
   }
-
 }

@@ -2,9 +2,9 @@
 
 .billboard {
   //height: 575px;
+  margin-top: 0 !important;
   box-shadow: inset 2px 3px 10px rgba(0, 0, 0, 0.1);
   background-color: #eeeeee;
-  margin-bottom: 59px;
   overflow: hidden;
 
   &__title {

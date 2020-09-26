@@ -259,3 +259,26 @@ textarea:hover {
   outline: 0;
   outline-offset: 0
 }
+
+
+.section {
+  &_container {
+    margin-top: 57px;
+    margin-bottom: 57px;
+  }
+
+  &_title {
+    font-family: $fnt-secondary;
+    font-weight: 900;
+    line-height: 42px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 0.65px;
+
+    @media (min-width: $lg) {
+      font-size: 42px;
+      letter-spacing: 1.05px;
+    }
+  }
+}

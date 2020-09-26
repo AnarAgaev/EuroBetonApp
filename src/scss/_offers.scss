@@ -1,14 +1,24 @@
 @import "variables";
 
 .offers {
-  margin-bottom: 46px;
-
   &__card {
     max-width: 278px;
 
     @media (min-width: $md ) {
       max-width: 555px;
       width: 100%;
+    }
+
+    &-wrap:nth-last-child(2) .card-body {
+      @media (min-width: $xl) {
+        margin-bottom: 0;
+      }
+    }
+
+    &-wrap:last-child {
+      .card-body {
+        margin-bottom: 0;
+      }
     }
   }
 
