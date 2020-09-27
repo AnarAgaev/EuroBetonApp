@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded",() => {
 
   const body = document.body;
   const dropLinks = document.querySelectorAll(".products__link.drop");
+  const navLinks = document.querySelectorAll(".nav__link.drop");
   let windowWidth = window.innerWidth;
 
   window.addEventListener('resize', (event) => {
@@ -69,8 +70,15 @@ document.addEventListener("DOMContentLoaded",() => {
 
 
   const closeAccordion =  () => {
-    for (let j = 0; j < dropLinks.length; ++j) {
-      dropLinks[j]
+    for (let i = 0; i < dropLinks.length; ++i) {
+      dropLinks[i]
+        .parentElement
+        .classList
+        .remove('visible');
+    }
+
+    for (let i = 0; i < navLinks.length; ++i) {
+      navLinks[i]
         .parentElement
         .classList
         .remove('visible');
@@ -93,6 +101,8 @@ document.addEventListener("DOMContentLoaded",() => {
   windowWidth >= 768
     ? replaceCart(true)
     : replaceCart(false);
+
+
 
 
 
@@ -138,13 +148,15 @@ document.addEventListener("DOMContentLoaded",() => {
 
 // Nav accordion for mobile version
   if (windowWidth <=1250) {
+
+    // Toggle product dropdown
     for (let i = 0; i < dropLinks.length; ++i) {
-      dropLinks[i].addEventListener('click', (event) => {
+      dropLinks[i].addEventListener('click', event => {
 
         event.preventDefault(); // stopping click on link
 
-        const prntClasses = event.target.parentElement.classList;
-        const isVisible = prntClasses.contains('visible');
+        let prntClasses = event.target.parentElement.classList;
+        let isVisible = prntClasses.contains('visible');
 
         closeAccordion();
 
@@ -153,6 +165,25 @@ document.addEventListener("DOMContentLoaded",() => {
           : prntClasses.add('visible');
       });
     }
+
+    // Toggle nav dropdown
+    for (let i = 0; i < navLinks.length; ++i) {
+      navLinks[i].addEventListener('click', event => {
+
+        event.preventDefault(); // stopping click on link
+
+        let prntClasses = event.target.parentElement.classList;
+        let isVisible = prntClasses.contains('visible');
+
+        closeAccordion();
+
+        isVisible
+          ? prntClasses.remove('visible')
+          : prntClasses.add('visible');
+      });
+    }
+
+
   }
 
 

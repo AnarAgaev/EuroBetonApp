@@ -202,35 +202,57 @@
       }
 
       .dropdown {
-
         &__list {
-          transition: $fnc-animation;
-          position: absolute;
-          min-width: calc(100% + 35px);
-          left: -20px;
-          top: 100%;
-          overflow: hidden;
-          background-color: white;
-          box-shadow: 2px 8px 8px rgba(0,0,0,.07);
-          border: 2px solid #eee;
-          border-top: none;
           max-height: 0;
-          padding: 0 22px;
-          opacity: 0;
+          height: auto;
+          transition: $fnc-animation;
+          position: relative;
+          width: calc(100% + 60px);
+          background-color: #434245;
+          margin-left: -30px;
+
+          @media (min-width: $xl) {
+            transition: $fnc-animation;
+            position: absolute;
+            min-width: calc(100% + 35px);
+            left: -20px;
+            top: 100%;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 2px 8px 8px rgba(0,0,0,.07);
+            border: 2px solid #eee;
+            border-top: none;
+            max-height: 0;
+            padding: 0 22px;
+            opacity: 0;
+          }
         }
 
         &__item {
+
+          background-color: transparent !important;
+
+          @media (min-width: $xl) {
+
+          }
+
+
           &:last-child > a {
             margin-bottom: 0;
           }
         }
 
         &__link {
-          color: $clr-font;
           transition: $fnc-line;
           position: relative;
           display: inline-block;
-          margin-bottom: 12px;
+          text-transform: initial !important;
+          color: white !important;
+
+          @media (min-width: $xl) {
+            color: $clr-font !important;
+            margin-bottom: 12px;
+          }
 
           &:hover {
             color: $clr-accent;
@@ -238,14 +260,31 @@
 
           &::before {
             content: "";
-            display: block;
+            display: none;
             width: 100%;
             height: 1px;
             background-color: $clr-accent;
             left: 0;
             bottom: 0;
             position: absolute;
+
+            @media (min-width: $xl) {
+              display: block;
+            }
           }
+        }
+      }
+
+      &.visible {
+        .dropdown__list {
+          &.company {
+            max-height: 110px;
+          }
+        }
+
+        .nav__link::after {
+          border-color: $clr-accent;
+          transform: rotate(135deg);
         }
       }
     }
@@ -623,6 +662,14 @@
             right: auto;
           }
         }
+      }
+    }
+
+    .visible {
+      .products__link:after {
+        border-left: 2px solid $clr-accent;
+        border-bottom: 2px solid $clr-accent;
+        transform: rotate(135deg);
       }
     }
   }
