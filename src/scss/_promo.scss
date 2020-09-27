@@ -1,11 +1,6 @@
 @import "variables";
 
 .promo {
-
-  @media (min-width: $xl) {
-    margin-bottom: 2px;
-  }
-
   &__cards {
     order: 2;
     display: flex;

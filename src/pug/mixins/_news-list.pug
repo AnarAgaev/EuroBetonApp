@@ -1,0 +1,10 @@
+mixin newsList(...data)
+    .container.news-list
+        .row.news-list__wrap
+            each val in data
+                 .col-md-6.col-xl-3.d-flex.justify-content-center
+                     a(href="").news-list__card
+                         .news-list__pic(style=`background-image: url('/img/${val[0]}');`)
+                         .news-list__desc
+                             .news-list__date #{val[1]}
+                             .news-list__caption #{val[2]}

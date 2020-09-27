@@ -1,62 +1,30 @@
 @import "variables";
 
+.page-index {
+  .news-list {
+    margin-bottom: 23px;
+
+    &__wrap {
+      & > div:nth-last-child(1),
+      & > div:nth-last-child(2) {
+        display: none !important;
+
+        @media (min-width: $md) {
+          display: flex !important;
+        }
+      }
+    }
+  }
+
+}
+
 .news-list {
-
-  // Временный класс и стили которые убирают два последних элемента.
-  // Удалить после интеграции в битрикс
-
-  .news-list__wrap {
-    & > div:nth-last-child(1),
-    & > div:nth-last-child(2) {
-      display: none !important;
-
-      @media (min-width: $md) {
-        display: flex !important;
-      }
-    }
-
-    & > div:nth-child(2) > a {
-      margin-bottom: 34px;
-
-      @media (min-width: $xl) {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  &__title {
-    text-align: right;
-    margin: 0 auto 11px;
-    font-weight: 500;
-    letter-spacing: 0.07px;
-    width: 260px;
-    
-    @media (min-width: $md) {
-      width: 620px;
-    }
-    @media (min-width: $lg) {
-      width: 730px;
-    }
-    @media (min-width: $xl) {
-      width: 100%;
-    }
-    a {
-      color: $clr-font;
-      transition: $fnc-line;
-      right: 7px;
-      position: relative;
-      border-bottom: 1px solid $clr-accent;
-
-      &:hover {
-        color: $clr-accent;
-      }
-    }
-  }
 
   &__card {
     height: 313px;
     width: 263px;
     padding-top: 19px;
+    margin-bottom: 34px;
 
     &:hover {
       .news-list__desc::after {
@@ -139,5 +107,34 @@
     position: relative;
     z-index: 3;
     padding: 0 50px;
+  }
+}
+
+.all-news {
+  text-align: right;
+  margin: 0 auto 11px;
+  font-weight: 500;
+  letter-spacing: 0.07px;
+  width: 260px;
+
+  @media (min-width: $md) {
+    width: 620px;
+  }
+  @media (min-width: $lg) {
+    width: 730px;
+  }
+  @media (min-width: $xl) {
+    width: 100%;
+  }
+  a {
+    color: $clr-font;
+    transition: $fnc-line;
+    right: 7px;
+    position: relative;
+    border-bottom: 1px solid $clr-accent;
+
+    &:hover {
+      color: $clr-accent;
+    }
   }
 }

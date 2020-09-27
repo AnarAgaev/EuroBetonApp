@@ -1,11 +1,13 @@
 //- Include used template for this page
 extends ../../templates/template
 
+include ../../mixins/_news-list
+
 //- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
 block variables
-    - let title       = 'Главная / EuroBetonApp'
-    - let description = 'Write description for the page here'
-    - let keywords    = 'Write keywords for the page here'
+    - let title       = 'Главная'
+    - let description = ''
+    - let keywords    = ''
     - let pageClass   = 'page-index'
 
 block content
@@ -18,4 +20,11 @@ block content
     include _partners
     include _requset
     include _promo
-    include _news
+    .container
+        .all-news
+            a(href="") Все новости
+    +newsList(
+       ['news1.jpg', '05 Сентября 2019', 'Противоморозные добавки в бетон'],
+       ['news2.jpg', '30 Августа 2019', 'Цементное молочко'],
+       ['news3.jpg', '02 Августа 2019', 'Бетон в дизайне',],
+       ['news4.jpg', '17 Июня  2019', 'Фундаменты и их виды'])
