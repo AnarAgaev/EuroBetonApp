@@ -171,8 +171,11 @@
         &:hover {
           .dropdown__list {
             opacity: 1;
-            max-height: 200px;
             padding: 7px 22px 20px;
+
+            &.company {
+             max-height: 100px;
+            }
           }
 
           .nav__link {
@@ -214,7 +217,9 @@
           @media (min-width: $xl) {
             transition: $fnc-animation;
             position: absolute;
+            width: auto;
             min-width: calc(100% + 35px);
+            margin-left: 0;
             left: -20px;
             top: 100%;
             overflow: hidden;
@@ -252,11 +257,12 @@
           @media (min-width: $xl) {
             color: $clr-font !important;
             margin-bottom: 12px;
+
+            &:hover {
+              color: $clr-accent !important;
+            }
           }
 
-          &:hover {
-            color: $clr-accent;
-          }
 
           &::before {
             content: "";
@@ -283,8 +289,10 @@
         }
 
         .nav__link::after {
-          border-color: $clr-accent;
-          transform: rotate(135deg);
+          @media (max-width: $xl - 1) {
+            border-color: $clr-accent;
+            transform: rotate(135deg);
+          }
         }
       }
     }
