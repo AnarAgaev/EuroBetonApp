@@ -1,7 +1,9 @@
 //- Include used template for this page
 extends ../../templates/template
 
+//- Include used mixins for this page
 include ../../mixins/_news-list
+include ../../mixins/_requset
 
 //- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
 block variables
@@ -13,17 +15,21 @@ block variables
 block content
     include _billboard
     include _offers
-    include ../../components/_calculator
+    include ../../mixins/_calculator
     include _prices
     include _advantages
     include _map
     include _partners
-    include _requset
+
+    +request('request-men', 'request-men.png', 'ПОЛУЧИТЬ РАСЧЕТ СТОИМОСТИ', 'Наш менеджер поможет Вам с выбором и рассчитает цену бетона с доставкой', 'оставить заявку')
+
     include _promo
+
     .container
         .all-news
             a(href="") Все новости
-    +newsList(
+
+    +news-list(
        ['news1.jpg', '05 Сентября 2019', 'Противоморозные добавки в бетон'],
        ['news2.jpg', '30 Августа 2019', 'Цементное молочко'],
        ['news3.jpg', '02 Августа 2019', 'Бетон в дизайне',],

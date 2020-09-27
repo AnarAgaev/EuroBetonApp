@@ -1,7 +1,11 @@
 //- Include used template for this page
 extends ../../templates/template
 
+//- Including mixins
 include ../../mixins/_news-list
+include ../../mixins/_page-title
+include ../../mixins/_bread-crumbs
+include ../../mixins/_requset
 
 //- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
 block variables
@@ -11,8 +15,31 @@ block variables
     - let pageClass   = 'page-news'
 
 block content
-    +newsList(
+    +bread-crumbs("О компании", "Новости")
+
+    +page-title("Новости")
+
+    +news-list(
         ['news1.jpg', '05 Сентября 2019', 'Противоморозные добавки в бетон'],
         ['news2.jpg', '30 Августа 2019', 'Цементное молочко'],
-        ['news3.jpg', '02 Августа 2019', 'Бетон в дизайне',],
-        ['news4.jpg', '17 Июня  2019', 'Фундаменты и их виды'])
+        ['news3.jpg', '02 Августа 2019', 'Бетон в дизайне'],
+        ['news4.jpg', '17 Июня  2019', 'Фундаменты и их виды'],
+
+        ['news4.jpg', '17 Июня  2019', 'Фундаменты и их виды'],
+        ['news2.jpg', '30 Августа 2019', 'Цементное молочко'],
+        ['news1.jpg', '05 Сентября 2019', 'Противоморозные добавки в бетон'],
+        ['news3.jpg', '02 Августа 2019', 'Бетон в дизайне'],
+
+        ['news3.jpg', '02 Августа 2019', 'Бетон в дизайне'],
+        ['news1.jpg', '05 Сентября 2019', 'Противоморозные добавки в бетон'],
+        ['news2.jpg', '30 Августа 2019', 'Цементное молочко']
+    )
+
+    .more-news
+        .container
+            .d-flex.justify-content-center
+                a.more-news__link(href="") Загрузить ещё новости
+
+    +request('request-car', 'request-car.png', 'КУПИТЬ БЕТОН С ДОСТАВКОЙ', 'Наш калькулятор позволит Вам рассчитать точную стоимость бетона с учётом вашего местонахождения.', 'РАССЧИТАТЬ')
+
+    include _faq

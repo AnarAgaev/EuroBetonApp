@@ -1,0 +1,126 @@
+@import "variables";
+
+.faq {
+
+  &__list {
+    margin-top: 44px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__btn {
+    width: 52px;
+    height: 44px;
+    position: absolute;
+    background-color: #e3e3e3;
+    right: 5px;
+    top: 50%;
+    margin-top: -22px;
+
+    @media (min-width: $md) {
+      width: 75px;
+      height: 59px;
+      margin-top: -30px;
+    }
+  }
+
+  &__caption {
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: 0.07px;
+    border: 2px solid #e3e3e3;
+    font-weight: 500;
+    padding: 17px 60px 17px 20px;
+    position: relative;
+    transition: $fnc-line;
+
+    @media (min-width: $md) {
+      font-size: 21px;
+      letter-spacing: 0.1px;
+      line-height: 25px;
+      padding: 21px 90px 21px 41px;
+    }
+
+    &:nth-child(n+1) {
+      margin-top: -2px;
+    }
+
+    &::before, &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: $clr-accent;
+      width: 15px;
+      height: 4px;
+      top: 50%;
+      right: 23px;
+      z-index: 10;
+      transition: $fnc-line;
+
+      @media (min-width: $md) {
+        right: 35px;
+      }
+    }
+
+    &::before {
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      transform: translateY(-50%) rotate(90deg);
+    }
+  }
+
+  &__description {
+    width: 100%;
+    color: #111010;
+    line-height: 26px;
+    letter-spacing: 0.07px;
+    padding: 0 22px 0 22px;
+    border: none;
+    overflow: hidden;
+    max-height: 0;
+    height: auto;
+    z-index: 9;
+    transition: max-height .3s, padding-top .3s, padding-bottom .3s;
+
+    @media (min-width: $md) {
+      padding: 0 79px 0 53px;
+    }
+  }
+
+  .visible {
+    .faq {
+      &__caption {
+        border: 2px solid #434245;
+        background-color: #434245;
+        color: #ffffff;
+
+        &::after {
+          transform: translateY(-50%) rotate(0);
+        }
+      }
+
+      &__description {
+        padding: 22px;
+        border: 2px solid #434245;
+        max-height: 600px;
+
+        @media (min-width: $md) {
+          padding: 23px 79px 25px 53px;
+        }
+      }
+
+      &__btn {
+        background-color: #ffffff;
+        opacity: 0.15;
+      }
+
+    }
+  }
+}

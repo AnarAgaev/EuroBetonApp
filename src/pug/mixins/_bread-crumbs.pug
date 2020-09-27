@@ -1,0 +1,8 @@
+mixin bread-crumbs(...items)
+    .bread-crumbs
+        .container
+            .d-flex.justify-content-center
+                ul.bread-crumbs__list.d-flex
+                    each val in items
+                        li.bread-crumbs__item
+                            a.bread-crumbs__link(href="#") #{val}

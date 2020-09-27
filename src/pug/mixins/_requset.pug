@@ -1,0 +1,12 @@
+mixin request(clazz, pic, ttl, cont, btntxt)
+    section.request.section_container
+        .container
+            .row
+                .request__pic.col-lg-4
+                    img(class=`${clazz}` src=`/img/${pic}`)
+
+                .request__desc.col-lg-8
+                    .request__title #{ttl}
+                    .request__content #{cont}
+                    .request__btn
+                        a.btn(href="") #{btntxt}

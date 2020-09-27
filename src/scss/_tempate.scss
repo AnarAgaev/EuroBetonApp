@@ -271,7 +271,6 @@ textarea:hover {
     font-family: $fnt-secondary;
     font-weight: 900;
     line-height: 42px;
-    text-transform: uppercase;
     text-align: center;
     font-size: 32px;
     letter-spacing: 0.65px;
@@ -281,4 +280,69 @@ textarea:hover {
       letter-spacing: 1.05px;
     }
   }
+}
+
+.page-index .section_title {
+  text-transform: uppercase;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+
+
+h1, .h1, h1.h1 {
+  color: #353535;
+  font-family: $fnt-secondary;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 54px;
+  text-align: center;
+}
+
+.page-title {
+  margin-bottom: 27px;
+}
+
+// Bread crumbs
+.bread-crumbs {
+
+  margin-top: 35px;
+
+  &__list {
+
+  }
+
+  &__item {
+    padding: 0 10px 0 5px;
+    position: relative;
+
+    &::after {
+      content: "/";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #353535;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: #353535;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    transition: $fnc-line;
+
+    &:hover {
+      color: $clr-accent;
+    }
+  }
+
 }
