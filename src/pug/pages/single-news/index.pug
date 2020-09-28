@@ -1,0 +1,27 @@
+//- Include used template for this page
+extends ../../templates/template
+
+//- Including mixins
+include ../../mixins/_page-title
+include ../../mixins/_bread-crumbs
+include ../../mixins/_requset
+include ../../mixins/_promo
+
+//- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
+block variables
+    - let title       = 'Отдельная новость'
+    - let description = ''
+    - let keywords    = ''
+    - let pageClass   = 'page-single-news'
+
+block content
+    +bread-crumbs("О компании", "Новости", "Бетон в дизайне")
+
+    +page-title("Бетон в дизайне")
+
+    include _news-slider
+
+    +request('request-men', 'request-men.png', 'ПОЛУЧИТЬ РАСЧЕТ СТОИМОСТИ', 'Наш менеджер поможет Вам с выбором и рассчитает цену бетона с доставкой', 'оставить заявку')
+
+    +promo
+

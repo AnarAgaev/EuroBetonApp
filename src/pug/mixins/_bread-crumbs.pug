@@ -2,7 +2,7 @@ mixin bread-crumbs(...items)
     .bread-crumbs
         .container
             .d-flex.justify-content-center
-                ul.bread-crumbs__list.d-flex
+                ul.bread-crumbs__list.d-flex.flex-wrap.justify-content-center
                     each val in items
                         li.bread-crumbs__item
                             a.bread-crumbs__link(href="#") #{val}
