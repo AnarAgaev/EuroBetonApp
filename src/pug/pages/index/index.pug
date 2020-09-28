@@ -2,9 +2,9 @@
 extends ../../templates/template
 
 //- Include used mixins for this page
-include ../../mixins/_news-list
-include ../../mixins/_requset
-include ../../mixins/_promo
+include ../../mixins/news-list/_news-list
+include ../../mixins/request/_requset
+include ../../mixins/promo/_promo
 
 //- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
 block variables
@@ -14,13 +14,13 @@ block variables
     - let pageClass   = 'page-index'
 
 block content
-    include _billboard
-    include _offers
-    include ../../mixins/_calculator
-    include _prices
-    include _advantages
-    include _map
-    include _partners
+    include billbord/_billboard
+    include offers/_offers
+    include ../../mixins/calculator/_calculator
+    include prices/_prices
+    include advantages/_advantages
+    include map/_map
+    include partners/_partners
 
     +request('request-men', 'request-men.png', 'ПОЛУЧИТЬ РАСЧЕТ СТОИМОСТИ', 'Наш менеджер поможет Вам с выбором и рассчитает цену бетона с доставкой', 'оставить заявку')
 

@@ -1,0 +1,19 @@
+//- Include used template for this page
+extends ../../templates/template
+
+//- Including mixins
+include ../../mixins/bread-crumbs/_bread-crumbs
+include ../../mixins/page-title/_page-title
+
+
+//- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
+block variables
+    - let title       = 'Вакансии'
+    - let description = ''
+    - let keywords    = ''
+    - let pageClass   = 'page-vacancy'
+
+block content
+    +bread-crumbs("О компании", "Новости", "Бетон в дизайне")
+
+    +page-title("Бетон в дизайне")

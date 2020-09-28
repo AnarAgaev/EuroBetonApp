@@ -2,10 +2,10 @@
 extends ../../templates/template
 
 //- Including mixins
-include ../../mixins/_news-list
-include ../../mixins/_page-title
-include ../../mixins/_bread-crumbs
-include ../../mixins/_requset
+include ../../mixins/news-list/_news-list
+include ../../mixins/page-title/_page-title
+include ../../mixins/bread-crumbs/_bread-crumbs
+include ../../mixins/request/_requset
 
 //- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
 block variables
@@ -42,4 +42,4 @@ block content
 
     +request('request-car', 'request-car.png', 'КУПИТЬ БЕТОН С ДОСТАВКОЙ', 'Наш калькулятор позволит Вам рассчитать точную стоимость бетона с учётом вашего местонахождения.', 'РАССЧИТАТЬ')
 
-    include _faq
+    include faq/_faq

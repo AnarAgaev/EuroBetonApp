@@ -1,20 +1,27 @@
-// INCLUDE STYLE COMPONENTS
+// Include style components
 @import "variables";
 @import "fonts";
-@import "tempate";
-@import "header";
-@import "billboard";
-@import "offers";
-@import "calculator";
-@import "prices";
-@import "advantages";
-@import "map";
-@import "partners";
-@import "request";
-@import "promo";
-@import "news-list";
-@import "faq";
-@import "single-news";
 
 
-@import "footer";
+// Template styles
+@import "../pug/templates/tempate";
+@import "../pug/templates/header/header";
+@import "../pug/templates/footer/footer";
+
+
+// Page components and mixins styles
+@import "../pug/pages/index/billbord/billboard";
+@import "../pug/pages/index/offers/offers";
+@import "../pug/mixins/calculator/calculator";
+@import "../pug/pages/index/prices/prices";
+@import "../pug/pages/index/advantages/advantages";
+@import "../pug/pages/index/map/map";
+@import "../pug/pages/index/partners/partners";
+@import "../pug/mixins/request/request";
+@import "../pug/mixins/promo/promo";
+@import "../pug/mixins/news-list/news-list";
+@import "../pug/pages/news/faq/faq";
+@import "../pug/pages/single-news/single-news";
+@import "../pug/pages/vacancy/vacancy";
+@import "../pug/mixins/bread-crumbs/bread-crumbs";
+@import "../pug/mixins/page-title/page-title";
