@@ -1,6 +1,3 @@
-// 📁 main.js
-
-
 document.addEventListener("DOMContentLoaded",() => {
 
   const body = document.body;
@@ -95,8 +92,8 @@ document.addEventListener("DOMContentLoaded",() => {
 
   const replaceCart = (move) => {
     move
-      ? headerTop.append(cart)
-      : headerBottom.append(cart);
+      ? headerTop.appendChild(cart)
+      : headerBottom.appendChild(cart);
   };
 
   // Replace cart after initial page
@@ -113,7 +110,7 @@ document.addEventListener("DOMContentLoaded",() => {
 
   const replaceOperating = (move) => {
     move
-      ? headerBottom.append(operating)
+      ? headerBottom.appendChild(operating)
       : body.prepend(operating);
   };
 
@@ -137,7 +134,7 @@ document.addEventListener("DOMContentLoaded",() => {
       logo.after(nav);
       region.after(headerTopNav);
     } else {
-      nav.append(headerTopNav);
+      nav.appendChild(headerTopNav);
       headerBottomContainer.prepend(nav);
     }
   };
@@ -211,19 +208,25 @@ document.addEventListener("DOMContentLoaded",() => {
         ? li.classList.remove('visible')
         : li.classList.add('visible');
     });
-
-
-
-
-
-
-
-
-
-
-
-
   }
+
+
+
+
+
+// Input FILE
+  let inputs = document.querySelectorAll(".label_file input");
+
+  for (let i = 0; i < inputs.length; i++) {
+    let controller = inputs[i].nextElementSibling;
+
+    inputs[i].addEventListener('change', (event) => {
+      controller.innerHTML = event.target.value.split('\\').pop();
+    });
+  }
+
+
+
 
 
 
@@ -236,9 +239,8 @@ document.addEventListener("DOMContentLoaded",() => {
 
 
 
-
+// ***Янадекс нары -- Начало
 if (document.getElementById("map")) {
-  // ***Янадекс нары -- Начало
 // Функция ymaps.ready() будет вызвана, когда
 // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
   ymaps.ready(init);
@@ -284,5 +286,5 @@ if (document.getElementById("map")) {
 
     myMap.behaviors.disable('scrollZoom');
   }
-// ***Янадекс нары -- Конец
 }
+// ***Янадекс нары -- Конец

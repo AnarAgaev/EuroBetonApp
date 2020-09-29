@@ -1,0 +1,39 @@
+.vacancy {
+
+  &__subtitle {
+    margin-bottom: 40px;
+  }
+
+  &__subtitle-pic {
+
+    img {
+      max-width: 70%;
+      margin-top: 10px;
+
+      @media (min-width: $md) {
+        max-width: 100%;
+      }
+
+      @media (min-width: $xl) {
+        margin-top: -20px;
+      }
+    }
+  }
+
+
+}
+
+
+.page-vacancy {
+  .bread-crumbs__wrap {
+    justify-content: start !important;
+  }
+
+  .page-title {
+    margin-bottom: 9px;
+  }
+
+  .page-title__content {
+    text-align: left;
+  }
+}

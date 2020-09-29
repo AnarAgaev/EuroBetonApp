@@ -2,15 +2,15 @@ section.calculator.section_container
     .calculator
         .calculator__title.d-flex.align-items-center.justify-content-center РАССЧИТАТЬ ЦЕНУ БЕТОНА С ДОСТАВКОЙ
 
-        form.calculator__form
+        form.form(enctype="multipart/form-data" method="post")
             .container
-                .calculator__form_place.d-flex.align-items-lg-end.flex-column.align-items-start.flex-lg-row
-                    .calculator__form__title Место и время доставки
-                    label.label.label_xl
+                .form__controls.form_place.d-flex.align-items-lg-end.flex-column.align-items-start.flex-lg-row
+                    .form__title Место и время доставки
+                    label.label.label_w380
                         span Адрес доставки:
                         input(type="text" placeholder="Россия, Московская область, сельский посёлок Карачиха")
 
-                    label.label.label_md
+                    label.label.label_w212
                         span Дата доставки:
                         input(type="text" placeholder="Не указана")
 
@@ -19,14 +19,14 @@ section.calculator.section_container
                         input(type="checkbox" value="true" name="takeself" checked)
                         .checker
 
-                    label.label.label_sm
+                    label.label.label_w205
                         span Выберите завод:
                         input(type="text" placeholder="Не указан")
 
-                .calculator__form_parametrs
-                    .calculator__form__title Основные параметры бетона:
+                .form__controls.form_parametrs
+                    .form__title Основные параметры бетона:
                     .group-one
-                        label.label.label_xl.label_select
+                        label.label.label_w380.label_select
                             span Марка:
                             select
                                 option(value="") Не указана
@@ -34,7 +34,7 @@ section.calculator.section_container
                                 option Пункт 2
                                 option Пункт 3
 
-                        label.label.label_md.label_select
+                        label.label.label_w212.label_select
                             span Прочность (кгс/см
                                 sup 2
                                 | ):
@@ -44,7 +44,7 @@ section.calculator.section_container
                                 option Пункт 2
                                 option Пункт 3
 
-                        label.label.label_lg.label_select
+                        label.label.label_w245.label_select
                             span Наполнитель:
                             select
                                 option(value="") Не указана
@@ -68,7 +68,7 @@ section.calculator.section_container
                             | (выберите при необходиости):
 
                     .group-two
-                        label.label.label_xs.label_select
+                        label.label.label_w179.label_select
                             span Морозостойкость:
                             select
                                 option(value="") Не указана
@@ -76,7 +76,7 @@ section.calculator.section_container
                                 option Пункт 2
                                 option Пункт 3
 
-                        label.label.label_xxs.label_select
+                        label.label.label_w174.label_select
                             span Подвижность:
                             select
                                 option(value="") Не указана
@@ -84,7 +84,7 @@ section.calculator.section_container
                                 option Пункт 2
                                 option Пункт 3
 
-                        label.label.label_md.label_select
+                        label.label.label_w212.label_select
                             span Водонепроницаемость:
                             select
                                 option(value="") Не указана
@@ -92,7 +92,7 @@ section.calculator.section_container
                                 option Пункт 2
                                 option Пункт 3
 
-                        label.label.label_xs.label_select
+                        label.label.label_w179.label_select
                             span Противоморозные доб.:
                             select
                                 option(value="") Не указана
@@ -100,7 +100,7 @@ section.calculator.section_container
                                 option Пункт 2
                                 option Пункт 3
 
-                        label.label.label_sm.label_select
+                        label.label.label_w205.label_select
                             span Фибра:
                             select
                                 option(value="") Не указана
@@ -110,12 +110,13 @@ section.calculator.section_container
 
                     .btn-form-send
                         span добавить товар
-                .calculator__form_comments.d-flex.justify-content-between.flex-wrap
+
+                .form_comments.d-flex.justify-content-between.flex-wrap
                         .d-flex.flex-column.wrapper.flex-xl-row
-                            .calculator__form_comments-text
+                            .form_comments-text
                                 .title Комментарий к заказу:
                                 textarea(placeholder="Начните вводить ...")
-                            .calculator__form_comments-technics
+                            .form_comments-technics
                                 .title Аренда техники:
                                 label.label.label_check.d-flex.align-items-center
                                     span Бетононасос
@@ -125,11 +126,12 @@ section.calculator.section_container
                                     span Кран
                                     input(type="checkbox" value="true" name="crane")
                                     .checker
-                        .calculator__form_comments-offer.d-flex.flex-column.align-items-center
+                        .form_comments-offer.d-flex.flex-column.align-items-center
                             .title
                                 b Набрал свыше 300 кубов?
                                 | Тогда получай
                             a.btn(href="") Персональное предложение
+
 
 
 

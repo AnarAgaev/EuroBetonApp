@@ -14,6 +14,22 @@ block variables
     - let pageClass   = 'page-vacancy'
 
 block content
-    +bread-crumbs("О компании", "Новости", "Бетон в дизайне")
+    +bread-crumbs("О компании", "Вакансии")
 
-    +page-title("Бетон в дизайне")
+    +page-title("Вакансии")
+
+    .vacancy__subtitle
+        .container
+            .row
+                .col-lg-7
+                    p.
+                        Если вы хотите работать в нашей компании, если ваш опыт и знания могут быть полезны компании «Евробетон» и направлены на ее развитие, если работая в «Евробетон», вы сможете получить новые знания и повысить свой профессиональный уровень — направьте резюме по адресу
+                        #[a.link(href="mailto: eurobeton@eurocem.ru") eurobeton@eurocem.ru]
+                        вне зависимости от наличия открытых вакансий.
+                    p Мы рассматриваем абсолютно все поступающие к нам резюме и ежедневно укрепляем свои позиции за счет профессионалов и единомышленников.
+
+                .col-lg-5
+                    .vacancy__subtitle-pic
+                        img(src="/img/puzzle.png" alt="" title="")
+
+    include interview/_interview

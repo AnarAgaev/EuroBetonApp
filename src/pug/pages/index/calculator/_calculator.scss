@@ -1,0 +1,104 @@
+.calculator {
+  &__title {
+    height: 130px;
+    background-color: #434245;
+    color: $clr-light;
+    font-family: $fnt-secondary;
+    font-weight: 900;
+    font-size: 26px;
+    letter-spacing: 0.65px;
+    padding: 0 15px;
+    text-align: center;
+    line-height: 35px;
+
+    @media (min-width: $lg) {
+      font-size: 30px;
+      letter-spacing: 1.5px;
+      height: 91px;
+    }
+  }
+
+  &__resaults {
+
+    &-wrap {
+      background-color: #434245;
+      padding: 16px 0 27px;
+
+      @media (min-width: $xl) {
+        height: 133px;
+        padding: 0;
+      }
+
+    }
+
+    &-btn {
+      order: 3;
+
+      @media (min-width: $xl) {
+        order: 0;
+      }
+
+      .btn {
+        padding: 16px 50px;
+
+        @media (min-width: $xl) {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+      }
+    }
+
+    &-price {
+      color: #ffffff;
+      padding-left: 26px;
+      padding-right: 27px;
+      height: 44px;
+
+      @media (min-width: $md) {
+        margin-bottom: 10px;
+      }
+
+      @media (min-width: $xl) {
+        height: 59px;
+        border-right: 1px solid #fff;
+        margin-right: 27px;
+        margin-bottom: 0;
+      }
+
+      span {
+        font-size: 26px;
+        font-weight: 700;
+        display: inline-block;
+        padding: 0 6px;
+
+        @media (min-width: $md) {
+          font-size: 42px;
+        }
+      }
+    }
+
+    &-comments {
+      color: #ffffff;
+      line-height: 25px;
+      margin-bottom: 15px;
+      font-size: 13px;
+      text-align: center;
+
+      @media (min-width: $md) {
+        font-size: 14px;
+      }
+
+      @media (min-width: $xl) {
+        font-size: 15px;
+        text-align: left;
+        margin-bottom: 0;
+      }
+
+      span {
+        font-weight: 700;
+        display: inline-block;
+        padding-left: 10px;
+      }
+    }
+  }
+}

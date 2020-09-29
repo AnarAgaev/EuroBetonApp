@@ -1,0 +1,42 @@
+form.form.form-interview-wrap(enctype="multipart/form-data" method="post")
+    .container
+        .form__controls.form_interview.d-flex.flex-column.align-items-start.flex-lg-row.flex-wrap
+            .form__title Записать на собеседование
+
+            label.label.label_w378
+                span Фамилии, Имя, Отчество:
+                input.control(type="text" placeholder="Иванов Ивановский Иванович")
+
+            label.label.label_w284
+                span Дата рождения:
+                input.control(type="text" placeholder="01.01.1999")
+
+            label.label.label_w339
+                span Телефон:
+                input.control(type="text" placeholder="+7 (999) 999-99-99")
+
+            label.label.label_w378
+                span Е-mail почта:
+                input.control(type="text" placeholder="example@example.com")
+
+            label.label.label_w653
+                span На какую должность Вы претендуете в нашей компании:
+                input.control(type="text")
+
+            label.label.label_file.label_w299
+                span Прикрепить анкету соискателя:
+                input#photo(type="file")
+                .controller.control
+                a.download(href="") Скачать образец анкеты соискателя
+
+            label.label.label_file.label_w175
+                span Прикрепить фото:
+                input#questionaty(type="file")
+                .controller.control
+
+            .form__send-wrap.d-flex.flex-column.flex-md-row.align-items-md-center
+                .form__send-btn
+                    button.btn(type="submit").btn Отправить
+                .form__send-caption
+                    span.
+                        Нажимая кнопку, вы соглашаетесь с условиями #[a(href="/") пользовательского соглашения] по обработке персональных данных

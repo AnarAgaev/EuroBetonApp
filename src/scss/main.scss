@@ -1,6 +1,7 @@
 // Include style components
 @import "variables";
 @import "fonts";
+@import "forms";
 
 
 // Template styles
@@ -10,9 +11,10 @@
 
 
 // Page components and mixins styles
+@import "../pug/pages/index/index";
 @import "../pug/pages/index/billbord/billboard";
 @import "../pug/pages/index/offers/offers";
-@import "../pug/mixins/calculator/calculator";
+@import "../pug/pages/index/calculator/calculator";
 @import "../pug/pages/index/prices/prices";
 @import "../pug/pages/index/advantages/advantages";
 @import "../pug/pages/index/map/map";
