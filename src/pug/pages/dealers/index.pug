@@ -1,0 +1,48 @@
+//- Include used template for this page
+extends ../../templates/template
+
+//- Including mixins
+include ../../mixins/bread-crumbs/_bread-crumbs
+include ../../mixins/page-title/_page-title
+include ../../mixins/promo/_promo
+
+
+//- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
+block variables
+    - let title       = 'Дилерам'
+    - let description = ''
+    - let keywords    = ''
+    - let pageClass   = 'page-dealers'
+
+block content
+    +bread-crumbs("Главная", "Производство", "Дилерам")
+
+    +page-title("Сотрудничество с АО «Евробетон» для бизнеса")
+
+    .dealers__subtitle
+        .container
+            .row
+                .col-xl-7
+                    p
+                        strong Станьте поставщиком, партнером или агентом АО «Евробетон».
+                        br
+                        | Мы предлагаем юридическим лицам разные направления сотрудничества. Поставляйте товары или услуги, представляйте наши интересы или распространяйте продукты АО «Евробетон», получая свою комиссию.
+                    p
+                        strong Выберите, что актуально для вас
+                        | и оставьте заявку, чтобы подробнее узнать об условиях и начать работу. А если у вас появится встречное предложение, будем рады его выслушать.
+
+                    .dealers__btn-wrap.d-flex.flex-column.align-items-center.flex-md-row
+                        a.btn(href="/") оставить заявку
+                        .dealers__btn-caption Сотрудничаем с предприятиями любой организационно-правовой формы и частными лицами.
+
+
+
+                .col-xl-5
+                    .dealers__subtitle-pic
+                        img(src="/img/dealers.png" alt="" title="")
+
+    include ../../mixins/partners/_partners
+
+    include ../../mixins/advantages/_advantages
+
+    +promo

@@ -106,11 +106,10 @@
     &__link {
       color: $clr-font;
       transition: $fnc-line;
-      width: 100%;
       height: 50px;
       display: flex;
       align-items: center;
-      position: relative;
+      position: initial;
 
       &::before {
         content: "";
@@ -122,20 +121,23 @@
         transition: $fnc-line;
         top: 41px;
         left: 50%;
+        opacity: 0;
       }
 
       @media (min-width: $xxl) {
         height: 64px;
+        position: relative;
       }
 
       &.drop {
-        position: relative;
+        margin-right: 12px;
+
         &::after {
           content: "";
           display: inline-block;
           position: absolute;
           margin-left: 10px;
-          right: 0;
+          right: 30px;
           transform: rotate(-45deg);
           width: 8px;
           height: 8px;
@@ -144,13 +146,13 @@
           transition: $fnc-line;
 
           @media (min-width: $xxl) {
-            right: auto;
-            transform: translateY(-3px) rotate(-45deg);
+            right: -12px;
+            top: 50%;
+            transform: translate(0, -3px) rotate(-45deg);
             width: 5px;
             height: 5px;
             border-left: 1px solid $clr-font;
             border-bottom: 1px solid $clr-font;
-            position: relative;
           }
         }
       }
@@ -184,14 +186,10 @@
             &::before {
               left: 0;
               width: 100%;
+              opacity: 1;
             }
 
             &.drop {
-              &::before {
-                width: calc(100% - 14px);
-                left: 0;
-              }
-
               &::after {
                 border-color: $clr-accent;
               }
@@ -390,7 +388,7 @@
       height: auto !important;
       top: auto !important;
       transform: translateY(0);
-      overflow: initial;
+      overflow: visible;
     }
 
     &__list {
@@ -458,6 +456,7 @@
             &::before {
               width: 100%;
               left: 0;
+              opacity: 1;
             }
           }
         }
@@ -484,10 +483,6 @@
             }
             .products__link {
               &.drop{
-                &::before {
-                  width: calc(100% - 19px);
-                }
-
                 &::after {
                   border-color: $clr-accent;
                 }
@@ -645,18 +640,22 @@
         bottom: 29px;
         left: 50%;
         width: 0;
+        opacity: 0;
         height: 1px;
         background-color: $clr-accent;
         transition: $fnc-line;
       }
 
       &.drop {
+        margin-right: 0;
+
         &::after {
           content: "";
           display: block;
           position: absolute;
           right: 30px;
-          transform: rotate(-45deg);
+          top: 50%;
+          transform: translateY(-3px) rotate(-45deg);
           width: 8px;
           height: 8px;
           border-left: 2px solid $clr-font;
@@ -664,11 +663,12 @@
           transition: $fnc-line;
 
           @media (min-width: $xxl) {
-            display: inline-block;
-            position: relative;
-            margin-left: 11px;
-            right: auto;
+            right: -16px;
           }
+        }
+
+        @media (min-width: $xxl) {
+          margin-right: 19px;
         }
       }
     }

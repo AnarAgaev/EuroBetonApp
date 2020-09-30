@@ -1,7 +1,7 @@
 //- Animation functions
 $fnc-primary                 : cubic-bezier(0.075, 0.82, 0.165, 1);
 $fnc-animation               : all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
-$fnc-line                    : all .3s;
+$fnc-line                    : all .3s linear;
 
 // Colors
 $clr-font                   : #000;

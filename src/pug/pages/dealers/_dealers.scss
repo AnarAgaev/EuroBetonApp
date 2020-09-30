@@ -1,0 +1,71 @@
+@import "../../../scss/variables";
+
+.dealers {
+
+  &__btn {
+    &-wrap {
+      padding-top: 7px;
+
+      @media (min-width: $md) {
+        width: 700px;
+      }
+
+      .btn {
+        margin-bottom: 10px;
+
+        @media (min-width: $md) {
+          margin-right: 40px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-caption {
+      color: #111010;
+      line-height: 26px;
+      letter-spacing: 0.07px;
+      text-align: center;
+
+      @media (min-width: $md) {
+        width: 402px;
+        text-align: left;
+      }
+    }
+  }
+
+  &__subtitle-pic img {
+    max-width: 85%;
+    margin-top: 50px;
+
+
+
+    @media (min-width: $xl) {
+      margin-left: 107px;
+      margin-top: -57px;
+    }
+
+  }
+
+}
+
+
+
+
+
+.page-dealers {
+  .bread-crumbs__wrap {
+    justify-content: start !important;
+  }
+
+  .page-title__content {
+    text-align: left;
+
+    @media (min-width: $xl) {
+      width: 700px;
+    }
+  }
+
+  .partners__title {
+    text-transform: uppercase;
+  }
+}
