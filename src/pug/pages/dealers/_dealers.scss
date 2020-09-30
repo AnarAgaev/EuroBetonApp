@@ -33,24 +33,41 @@
     }
   }
 
-  &__subtitle-pic img {
-    max-width: 85%;
-    margin-top: 50px;
+  &__subtitle {
+    &-pic img {
+      max-width: 70%;
+      margin-top: 50px;
+
+      @media (min-width: $xl) {
+        margin-left: 107px;
+        margin-top: -57px;
+      }
+    }
+
+    &-caption {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      margin: 11px auto 0;
+      width: 232px;
+      height: 41px;
+      color: #111010;
+      font-weight: 500;
+      line-height: 26px;
+      text-align: center;
 
 
-
-    @media (min-width: $xl) {
-      margin-left: 107px;
-      margin-top: -57px;
+      @media (min-width: $xl) {
+        position: absolute;
+        right: 16px;
+        bottom: 35px;
+        margin-top: 0;
+      }
     }
 
   }
 
 }
-
-
-
-
 
 .page-dealers {
   .bread-crumbs__wrap {
