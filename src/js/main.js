@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded",() => {
 // Replace cart at the header on mobile screen
   const cart = document.getElementById("cart");
   const headerBottom = document.getElementById("headerBottom");
-  const headerTop = document.getElementById("headerTop");
+  const headerTop = document.getElementById("headerTop").firstChild;
 
   const replaceCart = (move) => {
     move

@@ -42,19 +42,13 @@
     }
 
     &__body {
-    width: 100%;
-
-      @media (min-width: $md) {
-        width: auto;
-      }
-
+      width: 100%;
     }
   }
 
   .region {
-
-    @media (min-width: $md) {
-      width: 163px;
+    @media (min-width: $xxl) {
+      align-items: flex-start !important;
     }
 
     &__caption {
@@ -738,9 +732,13 @@
     }
   }
 
-  .phone {
+  .handset {
     width: 22px;
     height: 22px;
+    
+    @media (min-width: $md) {
+      display: none;
+    }
   }
 
   .visible {
