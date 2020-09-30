@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded",() => {
 
   const body = document.body;
   const dropLinks = document.querySelectorAll(".products__link.drop");
-  const navLinks = document.querySelectorAll(".nav__link.drop");
+  const navLinks = document.querySelectorAll(".nav__item.drop");
   const faqLinks = document.getElementsByClassName("faq__item");
   let windowWidth = window.innerWidth;
 
@@ -78,7 +78,6 @@ document.addEventListener("DOMContentLoaded",() => {
 
     for (let i = 0; i < navLinks.length; ++i) {
       navLinks[i]
-        .parentElement
         .classList
         .remove('visible');
     }
@@ -168,17 +167,14 @@ document.addEventListener("DOMContentLoaded",() => {
     // Toggle nav dropdown
     for (let i = 0; i < navLinks.length; ++i) {
       navLinks[i].addEventListener('click', event => {
-
-        event.preventDefault(); // stopping click on link
-
-        let prntClasses = event.target.parentElement.classList;
-        let isVisible = prntClasses.contains('visible');
+        let elClasses = event.target.classList;
+        let isVisible = elClasses.contains('visible');
 
         closeAccordion();
 
         isVisible
-          ? prntClasses.remove('visible')
-          : prntClasses.add('visible');
+          ? elClasses.remove('visible')
+          : elClasses.add('visible');
       });
     }
 

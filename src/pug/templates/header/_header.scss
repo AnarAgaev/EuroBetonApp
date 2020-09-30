@@ -128,25 +128,22 @@
 
         &::after {
           content: "";
-          display: inline-block;
+          display: none;
           position: absolute;
           margin-left: 10px;
-          right: 30px;
-          transform: rotate(-45deg);
-          width: 8px;
-          height: 8px;
           border-left: 2px solid $clr-font;
           border-bottom: 2px solid $clr-font;
           transition: $fnc-line;
+          right: -12px;
+          top: 50%;
+          transform: translate(0, -3px) rotate(-45deg);
+          width: 5px;
+          height: 5px;
+          border-left: 1px solid $clr-font;
+          border-bottom: 1px solid $clr-font;
 
           @media (min-width: $xxl) {
-            right: -12px;
-            top: 50%;
-            transform: translate(0, -3px) rotate(-45deg);
-            width: 5px;
-            height: 5px;
-            border-left: 1px solid $clr-font;
-            border-bottom: 1px solid $clr-font;
+            display: inline-block;
           }
         }
       }
@@ -196,6 +193,34 @@
         margin-right: 0;
       }
 
+      &.drop {
+        @media (min-width: $xxl) {
+          flex-direction: row;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 30px;
+          top: 24px;
+          -webkit-transform: translateY(-3px) rotate(-45deg);
+          -ms-transform: translateY(-3px) rotate(-45deg);
+          transform: translateY(-3px) rotate(-45deg);
+          width: 8px;
+          height: 8px;
+          border-left: 2px solid #000;
+          border-bottom: 2px solid #000;
+          -webkit-transition: all .3s linear;
+          -o-transition: all .3s linear;
+          transition: all .3s linear;
+
+          @media (min-width: $xxl) {
+            display: none;
+          }
+        }
+      }
+
       .dropdown {
         &__list {
           max-height: 0;
@@ -206,7 +231,7 @@
           background-color: #434245;
           margin-left: -30px;
 
-          @media (min-width: $xl) {
+          @media (min-width: $xxl) {
             transition: $fnc-animation;
             position: absolute;
             width: auto;
@@ -246,7 +271,7 @@
           text-transform: initial !important;
           color: white !important;
 
-          @media (min-width: $xl) {
+          @media (min-width: $xxl) {
             color: $clr-font !important;
             margin-bottom: 12px;
 
@@ -266,7 +291,7 @@
             bottom: 0;
             position: absolute;
 
-            @media (min-width: $xl) {
+            @media (min-width: $xxl) {
               display: block;
             }
           }
@@ -278,6 +303,11 @@
           &.company {
             max-height: 110px;
           }
+        }
+
+        &.drop::after {
+          border-color: $clr-accent;
+          transform: rotate(135deg);
         }
 
         .nav__link::after {
@@ -687,8 +717,6 @@
 
     @media (min-width: $md) {
       height: 60px;
-      width: 35px;
-      margin-right: 10px;
     }
     
     @media (min-width: $xxl) {
