@@ -1,6 +1,7 @@
 @import "../../../scss/variables";
 
-.page-index {
+.page-index,
+.page-certificates {
   .news-list {
     margin-bottom: 23px;
 
@@ -134,31 +135,6 @@
 
     &:hover {
       color: $clr-accent;
-    }
-  }
-}
-
-.more-news {
-  &__link {
-    font-weight: 500;
-    line-height: 30px;
-    color: $clr-font;
-    position: relative;
-    transition: $fnc-line;
-
-    &:hover {
-      color: $clr-accent;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      background-color: $clr-accent;
-      left: 0;
-      top: 23px;
     }
   }
 }

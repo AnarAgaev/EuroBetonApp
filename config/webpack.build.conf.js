@@ -27,7 +27,7 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
 		]),
 		new ImageminPlugin({
 				disable: process.env.NODE_ENV === 'production',
-				test: /\.(jpe?g|png|gif|svg)$/i,
+				test: /\.(jpe?g|png|gif|svg|cur)$/i,
 				optipng: {
 						optimizationLevel: 7
 				},

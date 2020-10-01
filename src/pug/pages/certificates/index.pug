@@ -1,0 +1,48 @@
+//- Include used template for this page
+extends ../../templates/template
+
+//- Including mixins
+include ../../mixins/bread-crumbs/_bread-crumbs
+include ../../mixins/page-title/_page-title
+include ../../mixins/promo/_promo
+include ../../mixins/get-more/get-more
+include ../../mixins/request/_requset
+include ../../mixins/promo/_promo
+include ../../mixins/news-list/_news-list
+
+
+//- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
+block variables
+    - let title       = 'Сертификаты'
+    - let description = ''
+    - let keywords    = ''
+    - let pageClass   = 'page-certificates'
+
+block content
+    +bread-crumbs("Главная", "Производство", "Сертификаты")
+
+    +page-title("Сертификаты")
+
+    .certificates
+        .container
+            ul.row.certificates__list
+                - for (let i = 0; i < 8; i++)
+                    li.col-md-6.col-lg-4.col-xl-3
+                        .certificates__card
+                             img.certificates__pic(src="/img/certificate.jpg" alt="" title="")
+
+        +get-more("page-certificates", "Загрузить ещё сертификаты")
+
+        +request('request-lab', 'request-lab.png', 'СОБСТВЕННАЯ ЛАБОРАТОРИЯ', 'Наша лаборатория предоставляет широкий спектр лабораторного сопровождения объектов строительства.', 'узнать больше')
+
+        +promo
+
+        .container
+            .all-news
+                a(href="") Все новости
+
+        +news-list(
+          ['news1.jpg', '05 Сентября 2019', 'Противоморозные добавки в бетон'],
+          ['news2.jpg', '30 Августа 2019', 'Цементное молочко'],
+          ['news3.jpg', '02 Августа 2019', 'Бетон в дизайне',],
+          ['news4.jpg', '17 Июня  2019', 'Фундаменты и их виды'])

@@ -6,6 +6,7 @@ include ../../mixins/news-list/_news-list
 include ../../mixins/page-title/_page-title
 include ../../mixins/bread-crumbs/_bread-crumbs
 include ../../mixins/request/_requset
+include ../../mixins/get-more/get-more
 
 //- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
 block variables
@@ -35,10 +36,7 @@ block content
         ['news2.jpg', '30 Августа 2019', 'Цементное молочко']
     )
 
-    .more-news
-        .container
-            .d-flex.justify-content-center
-                a.more-news__link(href="") Загрузить ещё новости
+    +get-more("page-news", "Загрузить ещё новости")
 
     +request('request-car', 'request-car.png', 'КУПИТЬ БЕТОН С ДОСТАВКОЙ', 'Наш калькулятор позволит Вам рассчитать точную стоимость бетона с учётом вашего местонахождения.', 'РАССЧИТАТЬ')
 
