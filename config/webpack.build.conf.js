@@ -23,11 +23,11 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
 		new CopyWebpackPlugin ([
 				{ from: `${PATHS.src}/img`, to: 'img' },
 				{ from: `${PATHS.src}/font`, to: 'font' },
-				{ from: `${PATHS.src}/static`, to: '' }
+				//{ from: `${PATHS.src}/static`, to: '' }
 		]),
 		new ImageminPlugin({
 				disable: process.env.NODE_ENV === 'production',
-				test: /\.(jpe?g|png|gif|svg|cur)$/i,
+				test: /\.(jpe?g|png|gif|svg)$/i,
 				optipng: {
 						optimizationLevel: 7
 				},

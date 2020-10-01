@@ -50,10 +50,17 @@ module.exports = {
                 loader: 'pug-loader'
             },
             {
-                test: /\.(png|jpg|gif|svg|cur)$/,
+                test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]'
+                }
+            },
+            {
+                test: /\.cur$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'img/[name].[ext]'
                 }
             },
             {
