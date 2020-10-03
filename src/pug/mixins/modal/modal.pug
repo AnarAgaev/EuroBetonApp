@@ -1,0 +1,39 @@
+.modal#modalSetOrder
+    .modal__dialog
+        .modal__content
+            .modal__header
+                h4.modal__title Оставить заявку
+
+
+            .modal-body
+                h5.modal__subtitle
+                    | Вам нужна помощь в расчёте стоимости бетона? Или у Вас есть другой вопрос?
+                    br
+                    | Наш менеджер поможет Вам во всём разобраться
+
+                form.form.modal__form.d-flex.flex-column.flex-md-row(enctype="multipart/form-data" method="post")
+                    .modal__controls.d-flex.flex-column
+                        label.label.label_w272
+                            span Ваше имя (название организации):
+                            input(type="text" placeholder="Иван")
+
+                        label.label.label_w272
+                            span Ваш e-mail:
+                            input(type="text" placeholder="example@example.com")
+
+                        label.label.label_w272
+                            span Телефон:
+                            input(type="text" placeholder="+7 (999) 999-99-99")
+
+                    .modal__msg
+                        label.label
+                            span Ваш вопрос (данные для расчета)?:
+                            textarea(placeholder="Начните вводить ...")
+
+
+            .modal__footer.d-flex.flex-column.flex-md-row.align-items-center.justify-content-center
+                button.btn отправить
+                .modal__agreement.
+                    Нажимая кнопку, вы соглашаетесь с условиями
+                    #[a.link(href="/") пользовательского соглашения]
+                    по обработке персональных данных
