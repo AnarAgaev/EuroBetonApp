@@ -7,6 +7,6 @@ mixin request(clazz, pic, ttl, cont, btntxt)
 
                 .request__desc.col-lg-8
                     .request__title #{ttl}
-                    .request__content #{cont}
+                    .request__content(class=`${clazz}`) #{cont}
                     .request__btn
                         a.btn(href="") #{btntxt}

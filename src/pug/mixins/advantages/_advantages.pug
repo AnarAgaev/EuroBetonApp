@@ -1,26 +1,10 @@
-section.advantages.section_container
-    .container
-        .row
-            .col-md-6.col-xl-3.advantages__card-wrap
-                .advantages__card.d-flex.flex-column.justify-content-center.align-items-center
-                    .advantages__pic
-                        img(src="/img/advantages-1.png" alt="" title="")
-                    .advantages__desc.px-5 Собственная сырьевая база
-
-            .col-md-6.col-xl-3.advantages__card-wrap
-                .advantages__card.d-flex.flex-column.justify-content-center.align-items-center
-                    .advantages__pic
-                        img(src="/img/advantages-2.png" alt="" title="")
-                    .advantages__desc.px-5  Высококачественное сырье
-
-            .col-md-6.col-xl-3.advantages__card-wrap
-                .advantages__card.d-flex.flex-column.justify-content-center.align-items-center
-                    .advantages__pic
-                        img(src="/img/advantages-3.png" alt="" title="")
-                    .advantages__desc Собственная испытательная лаборатория
-
-            .col-md-6.col-xl-3.advantages__card-wrap
-                .advantages__card.d-flex.flex-column.justify-content-center.align-items-center
-                    .advantages__pic
-                        img(src="/img/advantages-4.png" alt="" title="")
-                    .advantages__desc Тотальный контроль производства
+mixin advantages(...dataList)
+    section.advantages.section_container
+        .container
+            .row
+                each val in dataList
+                    .col-md-6.col-xl-3.advantages__card-wrap
+                        .advantages__card.d-flex.flex-column.justify-content-center.align-items-center
+                            .advantages__pic
+                                img(src=`/img/${val[1]}` alt="" title="")
+                            .advantages__desc(class=`${val[0]}`) #{val[2]}

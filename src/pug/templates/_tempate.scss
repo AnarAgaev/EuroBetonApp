@@ -55,10 +55,29 @@ img {
   margin: 0 auto;
 }
 
+
+//- Lists
 ul, li {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.list {
+  flex-direction: column;
+  display: flex;
+
+  &-item::before {
+      content: "";
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+      position: relative;
+      border-radius: 50%;
+      background-color: $clr-accent;
+      margin-right: 6px;
+      top: -4px;
+    }
 }
 
 
@@ -95,7 +114,6 @@ a {
               inset 0 0 0 rgba(111, 53, 5, 0.25);
   border-radius: 999px;
   border: none;
-  background-color: #c20c13;
   background-image: linear-gradient(to top, #f1852c 0%, #f8a838 100%);
   text-decoration: none;
   padding: 20px 50px;

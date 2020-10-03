@@ -5,6 +5,7 @@ extends ../../templates/template
 include ../../mixins/bread-crumbs/_bread-crumbs
 include ../../mixins/page-title/_page-title
 include ../../mixins/promo/_promo
+include ../../mixins/advantages/_advantages
 
 
 //- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
@@ -45,6 +46,11 @@ block content
 
     include ../../mixins/partners/_partners
 
-    include ../../mixins/advantages/_advantages
+    +advantages(
+      ["px-5", "advantages-1.png", "Собственная сырьевая база"],
+      ["px-5", "advantages-2.png", "Высококачественное сырье"],
+      ["", "advantages-3.png", "Собственная испытательная лаборатория"],
+      ["px-5", "advantages-4.png", "Тотальный контроль производства"]
+    )
 
     +promo

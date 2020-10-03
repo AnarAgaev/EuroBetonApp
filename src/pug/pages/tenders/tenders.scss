@@ -1,0 +1,20 @@
+@import "../../../scss/variables";
+
+.tenders {
+
+}
+
+
+.page-tenders {
+  .advantages {
+    margin-bottom: 0;
+    margin-top: 27px;
+
+    @media (min-width: $md) {
+      margin-top: 70px;
+    }
+  }
+  .request {
+    margin-top: 0;
+  }
+}

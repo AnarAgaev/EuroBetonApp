@@ -5,6 +5,7 @@ extends ../../templates/template
 include ../../mixins/news-list/_news-list
 include ../../mixins/request/_requset
 include ../../mixins/promo/_promo
+include ../../mixins/advantages/_advantages
 
 //- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
 block variables
@@ -18,7 +19,14 @@ block content
     include offers/_offers
     include calculator/_calculator
     include prices/_prices
-    include ../../mixins/advantages/_advantages
+
+    +advantages(
+      ["px-5", "advantages-1.png", "Собственная сырьевая база"],
+      ["px-5", "advantages-2.png", "Высококачественное сырье"],
+      ["", "advantages-3.png", "Собственная испытательная лаборатория"],
+      ["px-5", "advantages-4.png", "Тотальный контроль производства"]
+    )
+
     include map/_map
     include ../../mixins/partners/_partners
 

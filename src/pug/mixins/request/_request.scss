@@ -140,6 +140,11 @@
     @media (min-width: $md) {
       width: 421px;
       padding-bottom: 25px;
+
+
+      &.request-car {
+        width: 470px;
+      }
     }
   }
 
