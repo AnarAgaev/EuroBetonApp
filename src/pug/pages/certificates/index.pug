@@ -28,7 +28,7 @@ block content
             ul.row.certificates__list
                 - for (let i = 0; i < 8; i++)
                     li.col-md-6.col-lg-4.col-xl-3
-                        .certificates__card
+                        a.certificates__card(data-fancybox="certificates__gallery" href=`/img/doc${i%2}.jpg`)
                              img.certificates__pic(src="/img/certificate.jpg" alt="" title="")
 
         +get-more("page-certificates", "Загрузить ещё сертификаты")
