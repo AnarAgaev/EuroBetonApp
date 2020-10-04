@@ -11,101 +11,16 @@ section.prices.section_container
                 .slider__controller.slider__controller_right(id="slider-controller-right")
                 .slider__viewport
                     .slider__list.d-flex
-                        .slider__item.d-flex.flex-column.justify-content-start.align-items-center
-                            .prices__pic(style="background-image: url('/img/prices-pic.jpg')")
-                            .prices__caption БЕТОН
-                            .prices__desc М 100 В7.5 П2-П4 F50 W2
-                            .prices__price
-                                | от
-                                span 3000
-                                | руб./м
-                                sup 2
-                            .prices__btn
-                                a(href="/").btn ПОДРОБНЕЕ
 
-                        .slider__item.d-flex.flex-column.justify-content-start.align-items-center
-                            .prices__pic(style="background-image: url('/img/prices-pic.jpg')")
-                            .prices__caption БЕТОН
-                            .prices__desc М 100 В7.5 П2-П4 F50 W2
-                            .prices__price
-                                | от
-                                span 3000
-                                | руб./м
-                                sup 2
-                            .prices__btn
-                                a(href="/").btn ПОДРОБНЕЕ
-
-                        .slider__item.d-flex.flex-column.justify-content-start.align-items-center
-                            .prices__pic(style="background-image: url('/img/prices-pic.jpg')")
-                            .prices__caption БЕТОН
-                            .prices__desc М 100 В7.5 П2-П4 F50 W2
-                            .prices__price
-                                | от
-                                span 3000
-                                | руб./м
-                                sup 2
-                            .prices__btn
-                                a(href="/").btn ПОДРОБНЕЕ
-
-                        .slider__item.d-flex.flex-column.justify-content-start.align-items-center
-                            .prices__pic(style="background-image: url('/img/prices-pic.jpg')")
-                            .prices__caption БЕТОН
-                            .prices__desc М 100 В7.5 П2-П4 F50 W2
-                            .prices__price
-                                | от
-                                span 3000
-                                | руб./м
-                                sup 2
-                            .prices__btn
-                                a(href="/").btn ПОДРОБНЕЕ
-
-                        .slider__item.d-flex.flex-column.justify-content-start.align-items-center
-                            .prices__pic(style="background-image: url('/img/prices-pic.jpg')")
-                            .prices__caption БЕТОН
-                            .prices__desc М 100 В7.5 П2-П4 F50 W2
-                            .prices__price
-                                | от
-                                span 3000
-                                | руб./м
-                                sup 2
-                            .prices__btn
-                                a(href="/").btn ПОДРОБНЕЕ
-
-                        .slider__item.d-flex.flex-column.justify-content-start.align-items-center
-                            .prices__pic(style="background-image: url('/img/prices-pic.jpg')")
-                            .prices__caption БЕТОН
-                            .prices__desc М 100 В7.5 П2-П4 F50 W2
-                            .prices__price
-                                | от
-                                span 3000
-                                | руб./м
-                                sup 2
-                            .prices__btn
-                                a(href="/").btn ПОДРОБНЕЕ
-
-                        .slider__item.d-flex.flex-column.justify-content-start.align-items-center
-                            .prices__pic(style="background-image: url('/img/prices-pic.jpg')")
-                            .prices__caption БЕТОН
-                            .prices__desc М 100 В7.5 П2-П4 F50 W2
-                            .prices__price
-                                | от
-                                span 3000
-                                | руб./м
-                                sup 2
-                            .prices__btn
-                                a(href="/").btn ПОДРОБНЕЕ
-
-                        .slider__item.d-flex.flex-column.justify-content-start.align-items-center
-                            .prices__pic(style="background-image: url('/img/prices-pic.jpg')")
-                            .prices__caption БЕТОН
-                            .prices__desc М 100 В7.5 П2-П4 F50 W2
-                            .prices__price
-                                | от
-                                span 3000
-                                | руб./м
-                                sup 2
-                            .prices__btn
-                                a(href="/").btn ПОДРОБНЕЕ
-
-
-
+                        - for (let i = 0; i < 10; i++)
+                            .slider__item.d-flex.flex-column.justify-content-start.align-items-center
+                                .prices__pic(style="background-image: url('/img/prices-pic.jpg')")
+                                .prices__caption БЕТОН
+                                .prices__desc М 100 В7.5 П2-П4 F50 W2
+                                .prices__price
+                                    | от
+                                    span 3000
+                                    | руб./м
+                                    sup 2
+                                .prices__btn
+                                    a(href="/").btn ПОДРОБНЕЕ

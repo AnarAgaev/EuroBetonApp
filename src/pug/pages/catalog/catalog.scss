@@ -1,0 +1,26 @@
+.catalog {
+
+  &__item {
+    width: 286px;
+    height: 387px;
+    border: 2px solid #e3e3e3;
+    padding: 0 15px;
+    margin-bottom: -2px;
+
+    &:nth-child(n+1) {
+      margin-right: -2px;
+    }
+
+
+    @media (min-width: $sm) {
+      width: 100%;
+    }
+  }
+}
+
+.page-catalog {
+  .get-more {
+    margin-top: 35px;
+    margin-bottom: 63px;
+  }
+}
