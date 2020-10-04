@@ -2,26 +2,124 @@
 
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   padding: 0 5px;
   z-index: 999;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,0);
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  top: -100vh;
+  overflow-x: hidden;
   overflow-y: auto;
+  transition: background-color .1s linear, top 0s linear .2s;
 
-  &__dialog {
-    width: 100%;
-    max-width: 689px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    background-color: #eeeeee;
-    margin: 80px auto;
-    overflow: hidden;
+  &.show {
+    top: 0;
+    background-color: rgba(0,0,0,.5);
+    transition: background-color .1s linear 0s, top 0s linear 0s;
+
+    .modal__dialog {
+      transform: translateY(0);
+      opacity: 1;
+
+      @media (min-width: $md) and (min-height: 751px) {
+        transform: translate(-50%, -50%);
+      }
+
+    }
+  }
+
+  &__close {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: -17px;
+    right: 0;
+    cursor: pointer;
+
 
     @media (min-width: $md) {
-      border-radius: 50px;
+      top: -13px;
+      right: -25px;
+
+      &:hover::before,
+      &:hover::after {
+        background-color: $clr-accent;
+      }
+    }
+
+    &::before, &::after {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 4px;
+      background-color: white;
+      border-radius: 2px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: $fnc-line;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+
+    @media (min-width: $md) {
+      top: -13px;
+      right: -8px;
+    }
+
+  }
+
+  &__content {
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+
+
+
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 76px);
+      background-color: #eeeeee;
+      z-index: -1;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+
+      @media (min-width: $md) {
+        height: calc(100% - 88px);
+      }
+    }
+  }
+
+  &__dialog {
+    max-width: 689px;
+    position: relative;
+    width: auto;
+    margin: 50px auto;
+    transform: translateY(-25px);
+    opacity: 0;
+    transition: all .2s;
+
+    &_set-order {
+      @media (min-width: $md) and (min-height: 751px) {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -53%);
+      }
     }
   }
 
@@ -34,12 +132,19 @@
     font-family: $fnt-secondary;
     font-weight: 900;
     text-align: center;
-    padding: 13px 15px 21px;
+    padding: 17px 15px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 
     @media (min-width: $md) {
       font-size: 42px;
       line-height: 54px;
+      padding: 13px 15px 21px;
     }
+  }
+
+  &__body {
+    background-color: #eeeeee;
   }
 
   &__subtitle {
@@ -104,10 +209,14 @@
 
   &__footer {
     padding: 10px 0 30px;
+    margin: 0;
+    background-color: #eeeeee;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
     @media (min-width: $md) {
       padding: 10px 0 70px;
     }
-
   }
 
   &__agreement {

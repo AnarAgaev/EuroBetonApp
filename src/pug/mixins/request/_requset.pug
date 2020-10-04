@@ -1,4 +1,4 @@
-mixin request(clazz, pic, ttl, cont, btntxt)
+mixin request(modalId, clazz, pic, ttl, cont, btntxt)
     section.request.section_container
         .container
             .row
@@ -9,4 +9,4 @@ mixin request(clazz, pic, ttl, cont, btntxt)
                     .request__title #{ttl}
                     .request__content(class=`${clazz}`) #{cont}
                     .request__btn
-                        a.btn(href="") #{btntxt}
+                        a.btn.btn-modal(href="" data-modal-id=`${modalId}`) #{btntxt}

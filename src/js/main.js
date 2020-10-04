@@ -227,6 +227,30 @@ document.addEventListener("DOMContentLoaded",() => {
 
 
 
+// Show, hide modals
+let btns = document.getElementsByClassName('btn-modal');
+
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener('click', event => {
+    event.preventDefault();
+
+    const modalId = event.target.dataset.modalId;
+    const modal = document.getElementById(modalId);
+
+    if (modal) {
+      const btnClose = modal.querySelector(".modal__close");
+
+      btnClose.addEventListener("click", event => {
+        body.classList.remove("modal-open");
+        modal.classList.remove("show");
+      });
+
+      body.classList.add("modal-open");
+      modal.classList.add("show");
+    }
+  });
+}
+
 
 });
 
