@@ -22,7 +22,7 @@
 @import "../pug/mixins/request/request";
 @import "../pug/mixins/promo/promo";
 @import "../pug/mixins/news-list/news-list";
-@import "../pug/pages/news/faq/faq";
+@import "../pug/mixins/faq/faq";
 @import "../pug/pages/single-news/single-news";
 @import "../pug/pages/vacancy/vacancy";
 @import "../pug/mixins/bread-crumbs/bread-crumbs";
@@ -34,3 +34,4 @@
 @import "../pug/pages/tenders/table/table";
 @import "../pug/mixins/modal/modal";
 @import "../pug/pages/catalog/catalog";
+@import "../pug/pages/contacts/contacts";

@@ -230,6 +230,16 @@ document.addEventListener("DOMContentLoaded",() => {
 // Show, hide modals
 let btns = document.getElementsByClassName('btn-modal');
 
+const toggleModal = (modal, action) => {
+  if (action) {
+    body.classList.add("modal-open");
+    modal.classList.add("show");
+  } else {
+    body.classList.remove("modal-open");
+    modal.classList.remove("show");
+  }
+};
+
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener('click', event => {
     event.preventDefault();
@@ -240,16 +250,26 @@ for (let i = 0; i < btns.length; i++) {
     if (modal) {
       const btnClose = modal.querySelector(".modal__close");
 
-      btnClose.addEventListener("click", event => {
-        body.classList.remove("modal-open");
-        modal.classList.remove("show");
+      btnClose.addEventListener("click",
+        () => toggleModal(modal, false));
+
+      modal.addEventListener("click", event => {
+        if (event.target.id ===  modalId) {
+          toggleModal(modal, false);
+        }
       });
 
-      body.classList.add("modal-open");
-      modal.classList.add("show");
+      toggleModal(modal, true);
     }
   });
 }
+
+
+
+
+
+
+
 
 
 });
