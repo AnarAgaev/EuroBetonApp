@@ -267,6 +267,22 @@ for (let i = 0; i < btns.length; i++) {
 
 
 
+// Show, hide comments for product on product page
+const prodTgglr = document.querySelector(".product .description__toggler");
+const prodTxt = prodTgglr.closest(".description");
+
+prodTgglr.addEventListener("click", () => {
+  prodTxt.classList.toggle("show");
+
+  prodTgglr.innerHTML === "Развернуть"
+    ? prodTgglr.innerHTML = "Свернуть"
+    : prodTgglr.innerHTML = "Развернуть";
+});
+
+
+
+
+
 
 
 

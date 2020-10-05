@@ -15,7 +15,7 @@
 @import "../pug/pages/index/billbord/billboard";
 @import "../pug/pages/index/offers/offers";
 @import "../pug/pages/index/calculator/calculator";
-@import "../pug/pages/index/prices/prices";
+@import "../pug/mixins/prices/prices";
 @import "../pug/mixins/advantages/advantages";
 @import "../pug/pages/index/map/map";
 @import "../pug/mixins/partners/partners";
@@ -35,3 +35,4 @@
 @import "../pug/mixins/modal/modal";
 @import "../pug/pages/catalog/catalog";
 @import "../pug/pages/contacts/contacts";
+@import "../pug/pages/product/product";

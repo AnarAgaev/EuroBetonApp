@@ -70,19 +70,19 @@
 }
 
 .page-dealers {
-  .bread-crumbs__wrap {
-    justify-content: start !important;
-  }
+   .bread-crumbs__wrap {
+     justify-content: start !important;
+   }
 
-  .page-title__content {
-    text-align: left;
+   .page-title__content {
+     text-align: left;
 
-    @media (min-width: $xl) {
-      width: 700px;
-    }
-  }
+     @media (min-width: $xl) {
+       width: 700px;
+     }
+   }
 
-  .partners__title {
-    text-transform: uppercase;
-  }
-}
+   .partners__title {
+     text-transform: uppercase;
+   }
+ }

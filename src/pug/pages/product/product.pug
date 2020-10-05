@@ -1,0 +1,96 @@
+.product
+    .container
+        .row
+            .col-xl-6.image__wrap
+                .image(style="background-image: url(/img/M_100.jpg)")
+
+            .col-xl-6.specifications__wrap
+                .specifications
+                    h5.specifications__title Характеристики:
+
+                    ul.specifications__list
+                        li.specifications__item.d-flex.justify-content-between
+                            span.specifications__parametr Класс бетона
+                            span.specifications__value B15
+
+                        li.specifications__item.d-flex.justify-content-between
+                            span.specifications__parametr Средняя прочность, кгс/см #[sup 2]
+                            span.specifications__value 196
+
+                        li.specifications__item.d-flex.justify-content-between
+                            span.specifications__parametr Морозостойкость, F
+                            span.specifications__value F100
+
+                        li.specifications__item.d-flex.justify-content-between
+                            span.specifications__parametr Наполнитель
+                            span.specifications__value гравий
+
+                        li.specifications__item.d-flex.justify-content-between
+                            span.specifications__parametr Подвижность
+                            span.specifications__value П4
+
+                        li.specifications__item.d-flex.justify-content-between
+                            span.specifications__parametr Водонепроницаемость
+                            span.specifications__value W4
+
+
+            .col-xl-6.description__wrap
+                .description
+                    .description__content
+                        p #[b АО «ЕВРОБЕТОН»] предлагает своим клиентам приобрести качественный тощий бетон В7,5 – М100, изготовленный на современных производственных линиях в полном соответствии со стандартами ГОСТ. Качество продукции контролируется путем проведения испытаний собственной аккредитованной лабораторией. Каждая партия бетона сопровождается сертификатами качества и паспортами.
+                        p Товарный бетон М100 широко используется в жилом и коммерческом строительстве, отделке помещений, благоустройстве территории. Также его применяют для создания бетонной подготовки, укладывая на песчаную подушку, после чего устанавливается арматура. Показатель его плотности – 98 кгс/см2, готовый бетон рассчитан на 50-100 циклов разморозки. Жесткость материала – Ж2-Ж4. Меньшие параметры у продукции, роль заполнителя в которой исполняет известковый щебень, большие – гравийный.
+
+                    .description__toggler Развернуть
+
+            .col-xl-6.actions__wrap
+                .actions
+                    .actions__price.
+                        Стоимость:
+                        #[span от 3000 руб]
+
+                    .actions__btns.d-flex.flex-column.align-items-center.flex-xl-row.align-items-xl-start
+                        .actions__txt
+                            a.btn(href="") РАССЧИТАТЬ ПОЛНУЮ СТОИМОСТЬ
+                            .actions__comment Ваш заказ будет доставлен прямо на вашу строительную площадку в любое удобное время.
+                        a.btn.btn_call(href="")
+                            img(src="/img/phone.png" alt="" title="")
+
+
+                            //.align-items-center
+                    .actions__offer.d-flex.flex-column.align-items-center.flex-xl-row.justify-content-between
+                        span #[b Нужно свыше 300 кубов?] Тогда нажимай!
+                        a.btn(href="") Персональное предложение
+
+    .container.section_container
+        .row
+            .col-xl-5.calc__wrap
+                .calc
+                    h5.calc__title Автоматизированная система расчёта стоимости доставки
+
+                    form.form.calc__nums.d-flex.flex-column.align-items-start
+                        label.label.label_value
+                            span Количество(куб.м.)
+                            .value-checker
+                                .value-checker__btn.value-checker__btn_minus
+                                input(type="text" value="0" readonly)
+                                .value-checker__btn.value-checker__btn_plus
+
+                        label.label.label_w284.label_address
+                            span Адрес доставки:
+                            input(type="text" placeholder="Россия, Московская область, городской")
+
+                        button.btn(type="submit") рассчитать
+
+            .col-xl-7.map__wrap
+                #map
+
+    .container
+        .row
+            .col-xl-8.company
+                p #[b Компания АО «ЕВРОБЕТОН»] использует как собственный, так и арендованный транспорт, который обеспечивает перевозку до 9 кубических метров бетонной смеси за один рейс на строительный объект. Одним из ключевых преимуществ является наличие наиболее многочисленного в Москве автопарка, состоящего из более чем 100 единиц автобетоносмесителей и 15 автобетононасосов с длинной стрелы до 56 метров.
+                p Для указания количества автомашин для перевозки ЖБИ изделий, наши специалисты рассчитывают объем продукции и общую массу, соотносят с возможностями транспорта и только после этого производится доставка. По бетону – рассчитывается время доставки, интервал доставки, оптимальный маршрут.
+
+            .col-xl-4.banner
+                .banner__img
+                    img(src="/img/banner-cars.png" alt="" title="")
+                .banner__txt Для обеспечения качественной доставки движение каждой единицы автотранспорта отслеживается в он-лайн режиме сотрудниками отдела логистики.
