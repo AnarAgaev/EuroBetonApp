@@ -295,7 +295,7 @@ if (document.getElementById("map")) {
         // Уровень масштабирования. Допустимые значения:
         // от 0 (весь мир) до 19.
         zoom: 4,
-        controls: ['fullscreenControl', 'zoomControl'],
+        controls: [],
       }),
 
       myPlacemarkAsfaltobeton = new ymaps.Placemark([55.76, 37.64], {}, {
@@ -323,6 +323,10 @@ if (document.getElementById("map")) {
       .add(myPlacemarkAsfaltobeton)
       .add(myPlacemarkEkaterinburg)
       .add(myPlacemarkLipeck);
+
+    myMap.controls.add('zoomControl', {
+      size: "small"
+    });
 
     myMap.behaviors.disable('scrollZoom');
   }

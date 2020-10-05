@@ -22,7 +22,34 @@ block content
 
     .contacts
         .container
-            .row
+            .row.justify-content-center
+                .col-xl-5.contacts__description-wrap
+                    .contacts__description
+                        h4.contacts__title Головной офис в Москве
+
+                        p.contacts__addres.
+                            #[b Почтовый адрес: ]
+                            123308, Россия, г. Москва, Силикатный проезд, д. 10, стр. 15
+
+                        p.contacts__mail.
+                            #[b Электронная почта: ]
+                            #[a(class="link" href="mailto:kurilova@eurocem.ru" ) kurilova@eurocem.ru]
+                            #[a(class="link" href="mailto:eurobeton@eurocem.ru" ) eurobeton@eurocem.ru]
+
+                        p.contacts__sales
+                            b Отдел продаж Московского региона
+                            span (495) 795-30-18
+                            span (495) 536-00-16
+
+                        p.contacts__support
+                            b Центральная диспетчерская
+                            span (495) 795-30-25
+                            span +7 (903) 629-47-74
+
+                        a.btn.contacts__btn(href="/") Реквизиты АО «ЕВРОБЕТОН»
+
+                .col-xl-5.contacts__map-wrap
+                    .contacts__map#map
 
     +request(
         '',
@@ -32,5 +59,6 @@ block content
         'Наш менеджер поможет Вам с выбором и рассчитает цену бетона с доставкой',
         'оставить заявку'
     )
+
 
     include ../../mixins/faq/_faq
