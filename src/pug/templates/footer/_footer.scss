@@ -118,13 +118,14 @@
       margin-bottom: 7px;
 
       a {
-        color: $clr-light;
+        color: $clr-accent;
         padding-bottom: 1px;
-        background-image: linear-gradient(transparent calc(100% - 1px), $clr-accent 1px);
-        transition: $fnc-line;
+        transition: color .2s;
 
-        &:hover {
-          color: $clr-accent;
+        @media (min-width: $md) {
+          &:hover {
+            color: $clr-light;
+          }
         }
 
         &.bold {
