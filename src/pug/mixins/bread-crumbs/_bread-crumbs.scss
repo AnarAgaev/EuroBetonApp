@@ -29,10 +29,14 @@
 
   &__link {
     color: #353535;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     line-height: 26px;
     transition: $fnc-line;
+
+    @media (min-width: $sm) {
+      font-size: 16px;
+    }
 
     &:hover {
       color: $clr-accent;
