@@ -1,0 +1,58 @@
+@import "../../../scss/variables";
+
+.strategy {
+  margin-top: 35px;
+  margin-bottom: 60px;
+
+  &__pic {
+    img {
+      padding-bottom: 45px;
+      max-width: 70%;
+
+      @media (min-width: $xl) {
+        top: 45px;
+        padding-bottom: 0;
+        max-width: 100%;
+      }
+
+    }
+  }
+
+  &__title {
+    font-family: $fnt-secondary;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1.05px;
+    text-align: center;
+    margin-bottom: 23px;
+
+    @media (min-width: $sm) {
+      font-size: 42px;
+    }
+  }
+
+  &__subtitle {
+    color: #111010;
+    line-height: 26px;
+    letter-spacing: 0.07px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    width: 100%;
+    max-width: 722px;
+    margin: 0 auto 41px;
+  }
+
+  &__description {
+    &-title {
+      color: #111010;
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: 0.1px;
+      margin-bottom: 18px;
+    }
+  }
+}

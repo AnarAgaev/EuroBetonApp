@@ -1,0 +1,33 @@
+//- Include used template for this page
+extends ../../templates/template
+
+//- Including mixins
+include ../../mixins/bread-crumbs/_bread-crumbs
+include ../../mixins/page-title/_page-title
+include ../../mixins/advantages/_advantages
+include ../../mixins/promo/_promo
+
+//- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
+block variables
+    - let title       = 'О компании'
+    - let description = ''
+    - let keywords    = ''
+    - let pageClass   = 'page-company'
+
+block content
+    +bread-crumbs("Главная", "О компании")
+
+    +page-title("О компании")
+
+    include _company
+
+    include ../../mixins/strategy/_strategy
+
+    +advantages(
+      ["px-5", "advantages-1.png", "Собственная сырьевая база"],
+      ["px-5", "advantages-2.png", "Высококачественное сырье"],
+      ["", "advantages-3.png", "Собственная испытательная лаборатория"],
+      ["px-5", "advantages-4.png", "Тотальный контроль производства"]
+    )
+
+    +promo

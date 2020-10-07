@@ -193,18 +193,21 @@ document.addEventListener("DOMContentLoaded",() => {
     }
   };
 
-  for (let i = 0; i < faqLinks.length; ++i) {
-    faqLinks[i].addEventListener('click', event => {
-      let li = event.target.closest('li');
-      let isVisible = li.classList.contains('visible');
+  if (faqLinks.length > 0) {
+    for (let i = 0; i < faqLinks.length; ++i) {
+      faqLinks[i].addEventListener('click', event => {
+        let li = event.target.closest('li');
+        let isVisible = li.classList.contains('visible');
 
-      closeFaqAccordion();
+        closeFaqAccordion();
 
-      isVisible
-        ? li.classList.remove('visible')
-        : li.classList.add('visible');
-    });
-  }
+        isVisible
+          ? li.classList.remove('visible')
+          : li.classList.add('visible');
+      });
+    }  }
+
+
 
 
 
@@ -269,15 +272,19 @@ for (let i = 0; i < btns.length; i++) {
 
 // Show, hide comments for product on product page
 const prodTgglr = document.querySelector(".product .description__toggler");
-const prodTxt = prodTgglr.closest(".description");
 
-prodTgglr.addEventListener("click", () => {
-  prodTxt.classList.toggle("show");
+if (prodTgglr) {
+  const prodTxt = prodTgglr.closest(".description");
 
-  prodTgglr.innerHTML === "Развернуть"
-    ? prodTgglr.innerHTML = "Свернуть"
-    : prodTgglr.innerHTML = "Развернуть";
-});
+  prodTgglr.addEventListener("click", () => {
+    prodTxt.classList.toggle("show");
+
+    prodTgglr.innerHTML === "Развернуть"
+      ? prodTgglr.innerHTML = "Свернуть"
+      : prodTgglr.innerHTML = "Развернуть";
+  });
+}
+
 
 
 

@@ -57,6 +57,7 @@ img {
   max-width: 100%;
   display: block;
   margin: 0 auto;
+  position: relative;
 }
 
 
@@ -370,4 +371,56 @@ h3, .h3, h3.h3 {
   letter-spacing: 0.1px;
   margin-top: 20px;
   margin-bottom: 5px;
+}
+
+blockquote.blockquote,
+.blockquote {
+  padding: 45px 15px;
+  border: 3px solid #6d6d6d;
+  margin: 5px 0 25px;
+  position: relative;
+  color: #111010;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.07px;
+  text-align: center;
+
+  @media (min-width: $sm) {
+    padding: 45px 30px;
+  }
+
+  @media (min-width: $md) {
+    padding: 32px 70px;
+  }
+
+  @media (min-width: $lg) {
+    padding: 32px 165px;
+  }
+
+  &::before, &::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+  }
+
+  &::before {
+    top: -3px;
+    left: -3px;
+    z-index: 10;
+    background: white url("../img/quote-open.png") no-repeat top left;
+  }
+
+  &::after {
+    bottom: -3px;
+    right: -3px;
+    z-index: 10;
+    background: white url("../img/quote-close.png") no-repeat bottom right;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
 }

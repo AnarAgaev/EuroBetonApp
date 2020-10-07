@@ -1,0 +1,58 @@
+@import "../../../scss/variables";
+
+.company {
+
+  p {
+    margin-bottom: 25px;
+  }
+
+  &__pic-wrap {
+    @media (max-width: $xl - 1) {
+      order: -1;
+    }
+  }
+
+  &__director-pic {
+    img {
+      margin: 0 0 20px 0;
+
+      @media (min-width: $xl) {
+        margin: -11px 0 20px 0;
+      }
+    }
+  }
+
+  &__director-link {
+    margin-bottom: 20px;
+
+    @media (min-width: $xl) {
+      margin-bottom: 0;
+    }
+
+    a {
+      font-weight: bold;
+      margin-bottom: 7px;
+
+      &::before {
+        display: none;
+      }
+    }
+    
+    span {
+      display: block;
+      letter-spacing: 0.07px;
+    }
+  }
+
+}
+
+
+.page-company {
+  .bread-crumbs__wrap {
+    justify-content: start !important;
+  }
+
+  .page-title__content {
+    text-align: left;
+  }
+}
