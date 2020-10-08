@@ -1,0 +1,55 @@
+.laboratory
+    .container
+        .row
+            .col-xl-7
+                p Разработка рецептуры товарного бетона, проведение испытаний материалов на соответствие техническим регламентам и другие услуги нашей лаборатории обеспечивают гарантию ожидаемого качества. В арсенале особо отдела имеется все необходимое оборудование, при помощи которого получаются оперативные результаты для корректировки существующих процессов. Это виброплощадки, весы, ситы для рассеивания, ареометры, воздухомеры и приборы Вика.
+                p Наша лаборатория оснащена современным оборудованием, а сотрудники обладают техническими знаниями и опытом определения множества показателей товарного бетона. Проводим все виды исследований бетона с выдачей сертификата соответствия.
+
+            .col-xl-5
+                .laboratory__pic
+                    img(src="/img/lab.jpg" alt="" title="")
+
+            .col-12
+                blockquote.blockquote
+                    p Разработку рецептур готовых смесей и контроль качества осуществляет собственная аттестованная лаборатория, а сертификацию осуществляет независимая лаборатория научно-исследовательского и проектно-технологического института «Стройиндустрия».
+
+    .container
+        .row
+            .col-xl-4
+                .laboratory__security
+                    .laboratory__security-title ВСЯ ПРОДУКЦИЯ ОБЕСПЕЧЕНА:
+
+                    ul.laboratory__security-list.d-flex.flex-column
+                        each val, key in {1: 'Сертификатами соответсвия', 2: 'Государственными нормативными документами', 3: 'Гигиеническими заключениями на продукцию', 4: 'Сопровождается документом о качестве'}
+                            li.laboratory__security-item.d-flex.justify-content-start.align-items-center
+                                img(src=`img/lab-item-${key}.png`)
+                                | #{val}
+
+            .col-xl-8
+                .laboratory__equipment
+                    .laboratory__equipment-title ЛАБОРАТОРИЯ ОСНАЩЕНА ОБОРУДОВАНИЕМ ВЕДУЩИХ МИРОВЫХ ПРОИЗВОДИТЕЛЕЙ
+
+                    ul.laboratory__equipment-list.d-flex.flex-wrap
+                        li.laboratory__equipment-item
+                            img(src="/img/ele.png" alt="" type="")
+                            span Великобритания
+
+                        li.laboratory__equipment-item
+                            img(src="/img/testing.png" alt="" type="")
+                            span Германия
+
+                        li.laboratory__equipment-item
+                            img(src="/img/technotest.png" alt="" type="")
+                            span Италия
+
+                        li.laboratory__equipment-item
+                            img(src="/img/retsch.png" alt="" type="")
+                            span Германия
+
+                        li.laboratory__equipment-item
+                            img(src="/img/thermo.png" alt="" type="")
+                            span Швейцария
+
+                        li.laboratory__equipment-item
+                            img(src="/img/acmel.png" alt="" type="")
+                            span Франция

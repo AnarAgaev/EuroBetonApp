@@ -1,0 +1,41 @@
+//- Include used template for this page
+extends ../../templates/template
+
+//- Including mixins
+include ../../mixins/bread-crumbs/_bread-crumbs
+include ../../mixins/page-title/_page-title
+include ../../mixins/request/_requset
+include ../../mixins/advantages/_advantages
+include ../../mixins/promo/_promo
+
+//- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
+block variables
+    - let title       = 'Лаборатория'
+    - let description = ''
+    - let keywords    = ''
+    - let pageClass   = 'page-laboratory'
+
+block content
+    +bread-crumbs("Главная", "Производство", "Лаборатория")
+
+    +page-title("Лаборатория")
+
+    include _laboratory
+
+    +request(
+      '',
+      'request-car',
+      'request-car.png',
+      'КУПИТЬ БЕТОН С ДОСТАВКОЙ',
+      'Наш калькулятор позволит Вам рассчитать точную стоимость бетона с учётом вашего местонахождения.',
+      'РАССЧИТАТЬ'
+    )
+
+    +advantages(
+      ["", "advantages-5.png", "Непрерывный процесс производства"],
+      ["px-5", "advantages-6.png", "Широчайший ассортимент"],
+      ["px-5", "advantages-7.png", "Высокий уровень сервиса"],
+      ["px-5", "advantages-8.png", "Вся продукция сертифицирована"]
+    )
+
+    +promo
