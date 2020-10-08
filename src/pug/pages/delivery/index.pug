@@ -1,0 +1,33 @@
+//- Include used template for this page
+extends ../../templates/template
+
+//- Including mixins
+include ../../mixins/bread-crumbs/_bread-crumbs
+include ../../mixins/page-title/_page-title
+include ../../mixins/request/_requset
+
+
+//- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
+block variables
+    - let title       = 'Доставка'
+    - let description = ''
+    - let keywords    = ''
+    - let pageClass   = 'page-delivery'
+
+block content
+    +bread-crumbs("Главная", "Доставка")
+
+    +page-title("Доставка")
+
+    include _delivery
+
+    +request(
+      'modalSetOrder',
+      'request-men',
+      'request-men.png',
+      'ПОЛУЧИТЬ РАСЧЕТ СТОИМОСТИ',
+      'Наш менеджер поможет Вам с выбором и рассчитает цену бетона с доставкой',
+      'оставить заявку'
+    )
+
+    include ../../mixins/faq/_faq

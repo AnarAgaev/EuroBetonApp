@@ -1,0 +1,22 @@
+.container.section_container
+    .row
+        .col-xl-5.calc__wrap
+            .calc
+                h5.calc__title Автоматизированная система расчёта стоимости доставки
+
+                form.form.calc__nums.d-flex.flex-column.align-items-start
+                    label.label.label_value
+                        span Количество(куб.м.)
+                        .value-checker
+                            .value-checker__btn.value-checker__btn_minus
+                            input(type="text" value="0" readonly)
+                            .value-checker__btn.value-checker__btn_plus
+
+                    label.label.label_w284.label_address
+                        span Адрес доставки:
+                        input(type="text" placeholder="Россия, Московская область, городской")
+
+                    button.btn(type="submit") рассчитать
+
+        .col-xl-7.map__wrap
+            #map

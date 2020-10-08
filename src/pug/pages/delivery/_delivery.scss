@@ -1,0 +1,63 @@
+@import "../../../scss/variables";
+
+.delivery {
+
+  p {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__pic {
+    margin-top: 30px;
+
+    img {
+      max-width: 85%;
+
+      @media (min-width: $sm) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .calc__wrap {
+    @media (min-width: $lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .map__wrap {
+    height: 262px;
+    order: 0;
+
+    @media (min-width: $lg) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $xl) {
+      height: auto;
+      padding-left: 0;
+      order: 1;
+    }
+
+    #map {
+      height: 100%;
+
+      [class*="ymaps-2"][class*="-ground-pane"]{
+        filter: none;
+      }
+    }
+  }
+}
+
+.page-delivery {
+  .bread-crumbs__wrap {
+    justify-content: start !important;
+  }
+
+  .page-title__content {
+    text-align: left;
+  }
+}

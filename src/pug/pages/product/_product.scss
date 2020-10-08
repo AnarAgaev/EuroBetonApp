@@ -294,61 +294,6 @@
 
   }
 
-  .calc {
-    background-color: #eee;
-    padding: 25px 0 40px 20px;
-
-    @media (min-width: $xl) {
-      padding: 40px 0 51px 34px;
-    }
-
-    &__wrap {
-      order: 1;
-
-      @media (min-width: $xl) {
-        order: 0;
-        padding-right: 0;
-      }
-    }
-
-    &__title {
-      font-family: $fnt-secondary;
-      font-size: 21px;
-      font-weight: 700;
-      line-height: 32px;
-      padding-bottom: 20px;
-      padding-right: 20px;
-
-      @media (min-width: $xl) {
-        padding-right: 80px;
-        padding-bottom: 25px;
-      }
-    }
-
-
-    &__nums {
-      padding: 0;
-
-      .label_value {
-        @media (min-width: $lg) {
-          padding-bottom: 21px;
-        }
-      }
-
-      .label_address {
-        padding-bottom: 10px;
-
-        @media (min-width: $lg) {
-          padding-bottom: 38px;
-        }
-
-        @media (max-width: $md - 1) {
-          width: calc(100% - 20px);
-        }
-      }
-    }
-  }
-
   .map__wrap {
     height: 262px;
     order: 0;
