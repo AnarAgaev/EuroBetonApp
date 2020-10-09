@@ -68,7 +68,34 @@ document.addEventListener("DOMContentLoaded",() => {
   navTgglr.addEventListener('click', toggleHeaderNav);
 
 
-  const closeAccordion =  () => {
+// Toggle city select at the header on mobile screen
+  const region = document.getElementById("region");
+
+  region.addEventListener("click", event => {
+    if (windowWidth < 992) {
+      region
+        .classList
+        .toggle("city-select-visible");
+    }
+
+    body
+      .classList
+      .remove('phone-visible');
+    body
+      .classList
+      .remove('nav-visible');
+
+    closeAccordion();
+  });
+
+
+
+
+
+
+
+
+  const closeAccordion = () => {
     for (let i = 0; i < dropLinks.length; ++i) {
       dropLinks[i]
         .parentElement
@@ -125,7 +152,6 @@ document.addEventListener("DOMContentLoaded",() => {
   const headerBottomContainer = document.getElementById("headerBottomContainer");
   const headerTopNav = document.getElementById("headerTopNav");
   const nav = document.getElementById("nav");
-  const region = document.getElementById("region");
   const logo = document.getElementById("logo");
 
   const replaceNav = (move) => {
@@ -288,7 +314,15 @@ if (prodTgglr) {
 
 
 
+// Click outside any elements
+  document.addEventListener("click", event => {
+    const el = event.target.parentElement;
 
+    // Click outside city select
+    if (el.id !== 'region') {
+      region.classList.remove("city-select-visible");
+    }
+  });
 
 
 
@@ -321,71 +355,77 @@ if (document.getElementById("map")) {
         controls: [],
       }),
 
-      myPlacemarkKstovo = new ymaps.Placemark([56.179510068572036,44.15730749999993], {
-        balloonContentHeader: "Кстовский филиал",
-        balloonContentBody: "г. Кстово, ул. Магистральная, д. 1"
-      },
-      {
-        iconLayout: 'default#image',
-        iconImageHref: '/img/plc-kstovo.png',
-        iconImageSize: [185, 43],
-        iconImageOffset: [-16, -43]
-      }),
+      myPlacemarkKstovo = new ymaps.Placemark([56.179510068572036,44.15730749999993],
+        {
+          balloonContentHeader: "Кстовский филиал",
+          balloonContentBody: "г. Кстово, ул. Магистральная, д. 1"
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: '/img/plc-kstovo.png',
+          iconImageSize: [185, 43],
+          iconImageOffset: [-16, -43]
+        }),
 
-      myPlacemarkLipetsk = new ymaps.Placemark([52.60358425779388,39.59623749999995], {
-        balloonContentHeader: "Липецкий филиал",
-        balloonContentBody: "г. Липецк, район Цемзавода, 398027"
-      },
-      {
-        iconLayout: 'default#image',
-        iconImageHref: '/img/plc-lipeck.png',
-        iconImageSize: [185, 43],
-        iconImageOffset: [-16, -43]
-      }),
+      myPlacemarkLipetsk = new ymaps.Placemark([52.60358425779388,39.59623749999995],
+        {
+          balloonContentHeader: "Липецкий филиал",
+          balloonContentBody: "г. Липецк, район Цемзавода, 398027"
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: '/img/plc-lipeck.png',
+          iconImageSize: [185, 43],
+          iconImageOffset: [-16, -43]
+        }),
 
-      myPlacemarkGranitstroy = new ymaps.Placemark([56.00991906873449,37.436966], {
-        balloonContentHeader: "Гранитстрой",
-        balloonContentBody: "г. Лобня, Краснополянский проезд, д. 5"
-      },
-      {
-        iconLayout: 'default#image',
-        iconImageHref: '/img/plc-granitstroy.png',
-        iconImageSize: [154, 43],
-        iconImageOffset: [-16, -43]
-      }),
+      myPlacemarkGranitstroy = new ymaps.Placemark([56.00991906873449,37.436966],
+        {
+          balloonContentHeader: "Гранитстрой",
+          balloonContentBody: "г. Лобня, Краснополянский проезд, д. 5"
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: '/img/plc-granitstroy.png',
+          iconImageSize: [154, 43],
+          iconImageOffset: [-16, -43]
+        }),
 
-      myPlacemarkStroyRegion = new ymaps.Placemark([56.86988406782098,60.59384549999995], {
-        balloonContentHeader: "ООО «СтройРегион-Трейд ЕК»",
-        balloonContentBody: "г. Екатеринбург, ул. Артинская, д. 18"
-      },
-      {
-        iconLayout: 'default#image',
-        iconImageHref: '/img/plc-stroy-region.png',
-        iconImageSize: [255, 43],
-        iconImageOffset: [-16, -43]
-      }),
+      myPlacemarkStroyRegion = new ymaps.Placemark([56.86988406782098,60.59384549999995],
+        {
+          balloonContentHeader: "ООО «СтройРегион-Трейд ЕК»",
+          balloonContentBody: "г. Екатеринбург, ул. Артинская, д. 18"
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: '/img/plc-stroy-region.png',
+          iconImageSize: [255, 43],
+          iconImageOffset: [-16, -43]
+        }),
 
-      myPlacemarkEvrobeton = new ymaps.Placemark([55.77380806896347,37.50681899999997], {
-        balloonContentHeader: "Москва: ЖБИ АО «Евробетон»",
-        balloonContentBody: "г. Москва, 3-й Силикатный проезд, д. 10 , стр. 15"
-      },
-      {
-        iconLayout: 'default#image',
-        iconImageHref: '/img/plc-asfaltobeton.png',
-        iconImageSize: [199, 43],
-        iconImageOffset: [-16, -43]
-      }),
+      myPlacemarkEvrobeton = new ymaps.Placemark([55.77380806896347,37.50681899999997],
+        {
+          balloonContentHeader: "Москва: ЖБИ АО «Евробетон»",
+          balloonContentBody: "г. Москва, 3-й Силикатный проезд, д. 10 , стр. 15"
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: '/img/plc-asfaltobeton.png',
+          iconImageSize: [199, 43],
+          iconImageOffset: [-16, -43]
+        }),
 
-      myPlacemarkMedvedkovo = new ymaps.Placemark([55.88525156886214,37.62130049999999], {
-        balloonContentHeader: "Филиала Медведково АО «ЕВРОБЕТОН»",
-        balloonContentBody: "ул. Чермянская, д.5"
-      },
-      {
-        iconLayout: 'default#image',
-        iconImageHref: '/img/plc-medvedkovo.png',
-        iconImageSize: [197, 43],
-        iconImageOffset: [-16, -43]
-      });
+      myPlacemarkMedvedkovo = new ymaps.Placemark([55.88525156886214,37.62130049999999],
+        {
+          balloonContentHeader: "Филиала Медведково АО «ЕВРОБЕТОН»",
+          balloonContentBody: "ул. Чермянская, д.5"
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: '/img/plc-medvedkovo.png',
+          iconImageSize: [197, 43],
+          iconImageOffset: [-16, -43]
+        });
 
     myMap.geoObjects
       .add(myPlacemarkKstovo)

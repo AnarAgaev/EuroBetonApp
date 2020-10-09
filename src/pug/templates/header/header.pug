@@ -5,11 +5,22 @@
                 #navTgglr.nav-tglr
                     .nav-tglr__burger
 
-                #region.region.d-flex.flex-md-column.align-items-center
+                #region.region.d-flex.flex-md-column.align-items-center.justify-content-center
                     .region__map-marker.d-md-none
                         img(src="/img/map-marker-alt-solid.svg" alt="" title="")
                     .region__caption.d-none.d-md-block Ваш регион:
-                    .region__description Сергиев-Посад
+                    .region__description#regionCity Москва
+                    ul.region__list
+                        li.region__item.active(data-region-city="Москва")
+                            span Москва
+                        li.region__item(data-region-city="Липецк")
+                            span Липецк
+                        li.region__item(data-region-city="Екатеринбург")
+                            span Екатеринбург
+                        li.region__item(data-region-city="Кстово")
+                            span Кстово
+                        li.region__item(data-region-city="Лобня")
+                            span Лобня
 
                 nav.nav#headerTopNav
                     ul.nav__list.d-flex
