@@ -35,6 +35,9 @@ document.addEventListener("DOMContentLoaded",() => {
     body.classList.remove('phone-visible');
     body.classList.remove('nav-visible');
 
+    // Hide city select
+    region.classList.remove("city-select-visible");
+
   });
 
 // Toggle phone at the header on mobile screen
@@ -68,11 +71,13 @@ document.addEventListener("DOMContentLoaded",() => {
   navTgglr.addEventListener('click', toggleHeaderNav);
 
 
-// Toggle city select at the header on mobile screen
+// Toggle city selector at the header on mobile screen
   const region = document.getElementById("region");
 
   region.addEventListener("click", event => {
-    if (windowWidth < 992) {
+    let el = event.target;
+
+    if (el.closest('#region')) {
       region
         .classList
         .toggle("city-select-visible");
@@ -87,6 +92,35 @@ document.addEventListener("DOMContentLoaded",() => {
 
     closeAccordion();
   });
+
+// Change city
+  let cities = document.querySelectorAll(".region__item");
+
+  for (let i = 0; i < cities.length; i++) {
+    cities[i].addEventListener("click", event => {
+      let cityContainer = event.target.closest(".region__item");
+
+      // Push city to the region
+      document
+        .getElementById("regionCity")
+        .innerHTML = cityContainer.dataset.regionCity
+          ? cityContainer.dataset.regionCity
+          : event.target.closest(".region__item").dataset.regionCity;
+
+      // Show unselected city
+      document
+        .querySelector(".region__item.active")
+        .classList
+        .remove("active");
+
+      // Hide selected city
+      cityContainer
+        .classList
+        .add("active");
+    });
+  }
+
+
 
 
 
@@ -318,10 +352,18 @@ if (prodTgglr) {
   document.addEventListener("click", event => {
     const el = event.target.parentElement;
 
-    // Click outside city select
-    if (el.id !== 'region') {
+    if (!el.closest('#region')) {
       region.classList.remove("city-select-visible");
     }
+
+
+
+    // el.closest('#region') || el.id === "region"
+
+    // Click outside city select
+    // if (el.id !== "region" && region.classList.contains("city-select-visible")) {
+    //   region.classList.remove("city-select-visible");
+    // }
   });
 
 

@@ -49,7 +49,28 @@
   .region {
     position: relative;
     height: 44px;
-    cursor: default;
+    width: 140px;
+
+    &.city-select-visible {
+      .region__list {
+        max-height: 150px;
+        opacity: 1;
+        padding: 10px 0 20px;
+        box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.15);
+
+        @media (min-width: $md) {
+          padding: 0 0 20px;
+        }
+      }
+
+      &::after {
+        opacity: 1;
+      }
+
+      .region__description:after {
+        transform: translateY(0) rotate(135deg);
+      }
+    }
 
     &::after {
       content: "";
@@ -59,43 +80,22 @@
       height: 10px;
       background-color: white;
       bottom: -4px;
-      left: -23px;
       opacity: 0;
       transition: all .3s;
+
+      @media (min-width: $xl) {
+        left: -23px;
+      }
     }
 
     @media (min-width: $md) {
       height: 64px;
+      width: 140px;
 
       &::after {
         display: block;
       }
     }
-
-    @media (min-width: $lg) {
-      &:hover {
-        &::after {
-          opacity: 1;
-        }
-        .region__list {
-          max-height: 150px;
-          opacity: 1;
-        }
-      }
-    }
-
-    @media (max-width: $lg - 1) {
-      &.city-select-visible {
-        .region__list {
-          max-height: 150px;
-          opacity: 1;
-        }
-      }
-    }
-
-
-
-
 
     @media (min-width: $xxl) {
       align-items: flex-start !important;
@@ -103,14 +103,18 @@
 
     &__caption {
       font-weight: 300;
+      cursor: pointer;
     }
 
     &__description {
       color: $clr-accent;
       font-weight: 400;
+      line-height: 44px;
+      cursor: pointer;
 
       @media (min-width: $md) {
         font-weight: 700;
+        line-height: initial;
       }
 
       &::after {
@@ -123,6 +127,7 @@
         height: 5px;
         border-left: 1px solid $clr-accent;
         border-bottom: 1px solid $clr-accent;
+        transition: $fnc-line;
       }
     }
 
@@ -136,30 +141,29 @@
 
     &__list {
       position: absolute;
+      width: 145px;
       top: 44px;
-      box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
       border: 2px solid #eeeeee;
       border-top: none;
       background-color: #ffffff;
       font-family: $fnt-secondary;
-      font-size: 15px;
-      font-weight: 400;
-      font-style: normal;
-      letter-spacing: normal;
-      line-height: 30px;
-      text-align: left;
-      padding: 10px 0 20px;
-      left: -25px;
+      padding: 0;
+
       height: auto;
       max-height: 0;
       opacity: 0;
       transition: opacity .3s, max-height .3s;
       overflow: hidden;
-
+      cursor: default;
 
       @media (min-width: $md) {
         top: 65px;
         padding-top: 0;
+      }
+
+      @media (min-width: $xl) {
+        left: -25px;
       }
     }
 
@@ -168,6 +172,16 @@
       color: $clr-font;
       transition: $fnc-line;
       padding: 0 25px;
+      font-size: 15px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 30px;
+      text-align: center;
+
+      @media (min-width: $xl) {
+        text-align: left;
+      }
 
       &:hover {
         color: $clr-accent;
@@ -190,6 +204,7 @@
 
       @media (min-width:  $xxl) {
         flex-direction: row;
+        margin-left: -40px;
       }
     }
 
