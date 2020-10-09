@@ -1,0 +1,6 @@
+mixin sml-img-slider(...images)
+     ul.sml-img-slider__list
+
+         each val, key in images
+             li.sml-img-slider__item(class=`${key === 0 ? "front" : key === 1 ? "back" : ""}`)
+                 a.sml-img-slider__card(data-fancybox="sis1" href=`/img/${val[0]}` style=`background-image: url(/img/${val[1]})`)

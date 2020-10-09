@@ -1,3 +1,5 @@
+include ../../mixins/sml-img-slider/_sml-img-slider
+
 .laboratory
     .container
         .row
@@ -6,8 +8,13 @@
                 p Наша лаборатория оснащена современным оборудованием, а сотрудники обладают техническими знаниями и опытом определения множества показателей товарного бетона. Проводим все виды исследований бетона с выдачей сертификата соответствия.
 
             .col-xl-5
-                .laboratory__pic
-                    img(src="/img/lab.jpg" alt="" title="")
+                .laboratory__pic.d-flex.justify-content-center
+                    +sml-img-slider(
+                        ["pic1.jpg", "lab1.jpg"],
+                        ["pic2.jpg", "lab2.jpg"],
+                        ["pic3.jpg", "lab3.jpg"],
+                        ["pic4.jpg", "lab4.jpg"]
+                    )
 
             .col-12
                 blockquote.blockquote

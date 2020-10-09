@@ -120,15 +120,6 @@ document.addEventListener("DOMContentLoaded",() => {
     });
   }
 
-
-
-
-
-
-
-
-
-
   const closeAccordion = () => {
     for (let i = 0; i < dropLinks.length; ++i) {
       dropLinks[i]
@@ -368,6 +359,28 @@ if (prodTgglr) {
 
 
 
+
+
+// Slider for small image at the block
+const pics = document.querySelectorAll(".sml-img-slider__item");
+
+  for (let i = 0; i < pics.length; i++) {
+    pics[i].addEventListener("click", event => {
+      const el = event.target;
+
+      if (el.classList.contains("back")) {
+        const before = el.previousElementSibling;
+        const after = el.nextElementSibling;
+        const parent = el.parentElement;
+
+        before.classList.remove("front");
+        el.classList.remove("back");
+        el.classList.add("front");
+        after.classList.add("back");
+        parent.append(before);
+      }
+    });
+  }
 
 
 

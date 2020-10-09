@@ -1,0 +1,73 @@
+@import "../../../scss/variables";
+
+.sml-img-slider {
+  &__list {
+    width: 300px;
+    height: 208px;
+    overflow: hidden;
+    position: relative;
+
+    @media (min-width: $sm) {
+      width: 391px;
+      height: 270px;
+    }
+  }
+
+  &__item {
+    //width: 348px;
+    //height: 232px;
+    width: 89%;
+    height: 86%;
+
+    position: absolute;
+    top: 38px;
+    left: 44px;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+    transition: $fnc-line;
+
+    &.front {
+      opacity: 1;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      bottom: auto;
+      right: auto;
+
+      a {
+        box-shadow: inset 0 0 0 150px rgba(255,255,255,0);
+      }
+    }
+
+    &.back {
+      opacity: 1;
+      z-index: 2;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+    &__card {
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-position: center;
+      background-size: cover;
+      box-shadow: inset 0 0 0 150px rgba(255,255,255,0.65);
+      transition: $fnc-line;
+    }
+
+
+}
