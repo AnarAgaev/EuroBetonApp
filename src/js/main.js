@@ -364,31 +364,71 @@ if (prodTgglr) {
 // Slider for small image at the block
 const pics = document.querySelectorAll(".sml-img-slider__item");
 
-  for (let i = 0; i < pics.length; i++) {
-    pics[i].addEventListener("click", event => {
-      const el = event.target;
+for (let i = 0; i < pics.length; i++) {
+  pics[i].addEventListener("click", event => {
+    const el = event.target;
 
-      if (el.classList.contains("back")) {
-        const before = el.previousElementSibling;
-        const after = el.nextElementSibling;
-        const parent = el.parentElement;
+    if (el.classList.contains("back")) {
+      const before = el.previousElementSibling;
+      const after = el.nextElementSibling;
+      const parent = el.parentElement;
 
-        if (after) {
-          before.classList.remove("front");
-          el.classList.remove("back");
-          el.classList.add("front");
-          after.classList.add("back");
-          parent.append(before);
-        } else {
-          before.classList.remove("front");
-          before.classList.add("back");
-          el.classList.remove("back");
-          el.classList.add("front");
-          parent.append(before);
-        }
+      if (after) {
+        before.classList.remove("front");
+        el.classList.remove("back");
+        el.classList.add("front");
+        after.classList.add("back");
+        parent.append(before);
+      } else {
+        before.classList.remove("front");
+        before.classList.add("back");
+        el.classList.remove("back");
+        el.classList.add("front");
+        parent.append(before);
       }
-    });
+    }
+  });
+}
+
+
+
+
+
+
+// Breakstone page accordion
+const bsBtns = document.querySelectorAll(".breakstone__accordion-caption");
+const bsTxts = document.querySelectorAll(".breakstone__accordion-content");
+const closeBreakstoneAccordion = () => {
+  for (let i = 0; i < bsBtns.length; i++) {
+    bsBtns[i].classList.remove("active");
+    bsTxts[i].classList.remove("visible");
   }
+};
+
+for (let i = 0; i < bsBtns.length; i++) {
+  bsBtns[i].addEventListener("click", event => {
+    const el = event.target;
+    const elCaptionMark = el.dataset.captionMark;
+    const elContent = el.parentElement.querySelector(`[data-caption-for="${elCaptionMark}"]`);
+
+    // Off oll buttons and all content blocks
+    if (!el.classList.contains("active")) {
+      closeBreakstoneAccordion();
+    }
+
+    el.classList.toggle("active");
+    elContent.classList.toggle("visible");
+  });
+}
+
+
+
+
+
+
+
+
+
 
 
 

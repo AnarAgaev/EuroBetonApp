@@ -1,0 +1,159 @@
+include ../../mixins/sml-img-slider/_sml-img-slider
+
+.breakstone
+    section
+        .container
+            .row.breakstone__content
+                .col-xl-7
+                    .breakstone__title ООО «ЛОБСКОЕ-5»
+                    .breakstone__description
+                        ul.breakstone__list
+                            li.breakstone__item.
+                                #[span Основан:] 2004
+                            li.breakstone__item.
+                                #[span Мощность:] 1,5 млн т в год готовой продукции
+                            li.breakstone__item.
+                                #[span Адрес:] Республика Карелия, Медвежьегорский район П.Г.Т. Пергуба
+
+                        p Основным видом деятельности ООО «Лобское-5» является разработка месторождения гранитов «Лобское» и производство товарной щебеночной продукции.
+                        
+                .col-xl-5.order-1
+                    .right-side.breakstone__pic.d-flex.flex-column.align-items-center.align-items-xl-end
+                        +sml-img-slider(["fancy-galary-1", "pic1.jpg", "bs-1.jpg"],["fancy-galary-1", "pic2.jpg", "bs-2.jpg"])
+                        a.link.breakstone__link(href="/") Показать на карте
+
+
+
+
+
+        .container
+            .breakstone__accordion.d-flex.flex-column.flex-xl-row.flex-xl-wrap
+                .active.breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="1") ВЫПУСКАЕМАЯ НОМЕНКЛАТУРЫ
+                .visible.breakstone__accordion-content(data-caption-for="1")
+                    | Фракции - 5-20 мм, 20-40 мм,40-70мм, 5-10мм, 10-20мм,
+                    br
+                    | ЩПС: 0-40мм, 0-70мм, 0-80 мм и отсевы 0-5 мм.
+
+                .breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="2") ОБОРУДОВАНИЕ
+                .breakstone__accordion-content(data-caption-for="2") Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam deserunt doloribus earum ipsa ipsam ipsum labore mollitia nobis officiis perferendis quae quas rem repellat reprehenderit, vero voluptas. Ipsa, labore?
+
+                .breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="3") СПОСОБЫ ОТГРУЗКИ
+                .breakstone__accordion-content(data-caption-for="3") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, blanditiis commodi consequatur cupiditate debitis eius enim et, excepturi fuga fugiat ipsam, iusto laborum quibusdam quos ut veniam voluptatem voluptates. Quibusdam!
+
+                .breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="4") ПРЕИМУЩЕСТВА
+                .breakstone__accordion-content(data-caption-for="4")
+                    ul.list
+                        li.list-item Наличие фракции 25-60 мм для балластировки железнодорожного пути;
+                        li.list-item Наличие сертификатов соответствия и таможенных деклараций на выпускаемую продукцию;
+                        li.list-item Высокопрочный кубовидный щебень фракции 5-20 мм подходит для строительства крупных объектов;
+                        li.list-item Высокая производительность погрузки в транспорт.
+
+                .breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="5") ПРОИЗВОДСТВЕННАЯ МОЩНОСТЬ
+                .breakstone__accordion-content(data-caption-for="5") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad itaque, reiciendis. Autem odio recusandae totam vitae. Aliquid distinctio dolorem ipsam odio placeat? Aperiam architecto, cum cumque libero quasi veritatis voluptas?
+
+
+
+
+
+
+    section
+        .container
+            .row.breakstone__content
+                .col-xl-5.order-1
+                    .left-side.breakstone__pic.d-flex.flex-column.align-items-center.align-items-xl-start
+                        +sml-img-slider(["fancy-galary-2", "pic1.jpg", "bs-3.jpg"],["fancy-galary-2", "pic2.jpg", "bs-4.jpg"])
+                        a.link.breakstone__link(href="/") Показать на карте
+
+                .col-xl-7.order-xl-2
+                    .breakstone__title ООО «ПРОМ-АКТИВ»
+                    .breakstone__description
+                        ul.breakstone__list
+                            li.breakstone__item.
+                                #[span Основан:] 1954
+                            li.breakstone__item.
+                                #[span Мощность:] 3 млн т в год
+                            li.breakstone__item.
+                                #[span Адрес:] 462811, Оренбургская обл., Новоорский р-н, пос. Гранитный
+                            li.breakstone__item.
+                                #[span Телефон/факс:] +7 (35363) 301-87
+                            li.breakstone__item.
+                                #[span Отдел продаж:] +7 (495) 737-55-00, доб. 18-31
+
+                        p Основным видом деятельности ООО «Пром-Актив» является разработка Новоорского месторождения гранитов и производство товарной щебеночной продукции.
+
+
+
+        .container
+            .breakstone__accordion.d-flex.flex-column.flex-xl-row.flex-xl-wrap
+                .breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="1") ВЫПУСКАЕМАЯ НОМЕНКЛАТУРЫ
+                .breakstone__accordion-content(data-caption-for="1")
+                    | Фракции - 5-20 мм, 20-40 мм,40-70мм, 5-10мм, 10-20мм,
+                    br
+                    | ЩПС: 0-40мм, 0-70мм, 0-80 мм и отсевы 0-5 мм.
+
+                .breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="2") ОБОРУДОВАНИЕ
+                .breakstone__accordion-content(data-caption-for="2") Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam deserunt doloribus earum ipsa ipsam ipsum labore mollitia nobis officiis perferendis quae quas rem repellat reprehenderit, vero voluptas. Ipsa, labore?
+
+                .breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="3") СПОСОБЫ ОТГРУЗКИ
+                .breakstone__accordion-content(data-caption-for="3") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, blanditiis commodi consequatur cupiditate debitis eius enim et, excepturi fuga fugiat ipsam, iusto laborum quibusdam quos ut veniam voluptatem voluptates. Quibusdam!
+
+                .active.breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="4") ПРЕИМУЩЕСТВА
+                .visible.breakstone__accordion-content(data-caption-for="4")
+                    ul.list
+                        li.list-item Наличие фракции 25-60 мм для балластировки железнодорожного пути;
+                        li.list-item Наличие сертификатов соответствия и таможенных деклараций на выпускаемую продукцию;
+                        li.list-item Высокопрочный кубовидный щебень фракции 5-20 мм подходит для строительства крупных объектов;
+                        li.list-item Высокая производительность погрузки в транспорт.
+
+                .breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="5") ПРОИЗВОДСТВЕННАЯ МОЩНОСТЬ
+                .breakstone__accordion-content(data-caption-for="5") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad itaque, reiciendis. Autem odio recusandae totam vitae. Aliquid distinctio dolorem ipsam odio placeat? Aperiam architecto, cum cumque libero quasi veritatis voluptas?
+
+
+
+
+
+
+    section
+        .container
+            .row.breakstone__content
+                .col-xl-7
+                    .breakstone__title ЖИГУЛЕВСКИЙ ФИЛИАЛ АО «ЕВРОБЕТОН»
+                    .breakstone__description
+                        ul.breakstone__list
+                            li.breakstone__item.
+                                #[span Основан:] 2004
+                            li.breakstone__item.
+                                #[span Мощность:] 1,5 млн т в год готовой продукции
+                            li.breakstone__item.
+                                #[span Адрес:] Республика Карелия, Медвежьегорский район П.Г.Т. Пергуба
+
+                        p ЖИГУЛЕВСКИЙ филиал АО «ЕВРОБЕТОН» - КРУПНЕШИЙ ПРОИЗВОДИТЕЛЬ КАМНЕЩЕБЕНОЧНОЙ ПРОДКЦИИ ЕВРОПЕЙСКОГО КАЧЕСТВА В САМАРСКОМ РЕГИОНЕ.
+
+                .col-xl-5.order-1
+                    .right-side.breakstone__pic.d-flex.flex-column.align-items-center.align-items-xl-end
+                        +sml-img-slider(["fancy-galary-3", "pic1.jpg", "bc-5.jpg"],["fancy-galary-3", "pic2.jpg", "bs-2.jpg"])
+                        a.link.breakstone__link(href="/") Показать на карте
+        .container
+            .breakstone__accordion.d-flex.flex-column.flex-xl-row.flex-xl-wrap
+                .breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="1") ВЫПУСКАЕМАЯ НОМЕНКЛАТУРЫ
+                .breakstone__accordion-content(data-caption-for="1")
+                    | Фракции - 5-20 мм, 20-40 мм,40-70мм, 5-10мм, 10-20мм,
+                    br
+                    | ЩПС: 0-40мм, 0-70мм, 0-80 мм и отсевы 0-5 мм.
+
+                .breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="2") ОБОРУДОВАНИЕ
+                .breakstone__accordion-content(data-caption-for="2") Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam deserunt doloribus earum ipsa ipsam ipsum labore mollitia nobis officiis perferendis quae quas rem repellat reprehenderit, vero voluptas. Ipsa, labore?
+
+                .active.breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="3") СПОСОБЫ ОТГРУЗКИ
+                .visible.breakstone__accordion-content(data-caption-for="3") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, blanditiis commodi consequatur cupiditate debitis eius enim et, excepturi fuga fugiat ipsam, iusto laborum quibusdam quos ut veniam voluptatem voluptates. Quibusdam!
+
+                .breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="4") ПРЕИМУЩЕСТВА
+                .breakstone__accordion-content(data-caption-for="4")
+                    ul.list
+                        li.list-item Наличие фракции 25-60 мм для балластировки железнодорожного пути;
+                        li.list-item Наличие сертификатов соответствия и таможенных деклараций на выпускаемую продукцию;
+                        li.list-item Высокопрочный кубовидный щебень фракции 5-20 мм подходит для строительства крупных объектов;
+                        li.list-item Высокая производительность погрузки в транспорт.
+
+                .breakstone__accordion-caption.d-flex.justify-content-center.align-items-center(data-caption-mark="5") ПРОИЗВОДСТВЕННАЯ МОЩНОСТЬ
+                .breakstone__accordion-content(data-caption-for="5") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad itaque, reiciendis. Autem odio recusandae totam vitae. Aliquid distinctio dolorem ipsam odio placeat? Aperiam architecto, cum cumque libero quasi veritatis voluptas?

@@ -1,0 +1,142 @@
+@import "../../../scss/variables";
+
+.breakstone {
+
+  section {
+    &:first-child .breakstone__content {
+      padding-top: 12px;
+    }
+
+    &:last-child .breakstone__content::after {
+      display: none;
+    }
+  }
+
+  p {
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    color: #111010;
+    line-height: 26px;
+    letter-spacing: 0.07px;
+    margin-bottom: 22px;
+  }
+
+  &__item {
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__content {
+    padding-top: 30px;
+    padding-bottom: 23px;
+    position: relative;
+
+    @media (min-width: $xl) {
+      padding-top: 53px;
+    }
+  }
+
+  &__title {
+    color: #111010;
+    font-size: 21px;
+    line-height: 26px;
+    letter-spacing: 0.1px;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  &__link {
+    margin-top: 13px;
+  }
+
+  &__accordion {
+    border-top: 1px solid #eeeeee;
+    margin-bottom: 17px;
+
+    @media (min-width: $xl) {
+      border-top: none;
+      margin-bottom: 0;
+    }
+
+    &-caption {
+      color: #111010;
+      letter-spacing: 0.07px;
+      text-transform: uppercase;
+      height: 46px;
+      text-align: center;
+      font-size: 14px;
+      border-bottom: 1px solid #eeeeee;
+      border-right: 1px solid #eeeeee;
+      border-left: 1px solid #eeeeee;
+      transition: $fnc-line;
+
+      &.active {
+        background-color: #434245;
+        color: white;
+      }
+
+      @media (min-width: $sm) {
+        font-size: 15px;
+      }
+
+      @media (min-width: $xl) {
+        border-right: 1px solid #eeeeee;
+        border-top: 1px solid #eeeeee;
+        order: 0;
+        flex: 1 1 auto;
+        border-left: none;
+
+        &:first-of-type {
+          border-left: 1px solid #eeeeee;
+        }
+      }
+    }
+
+    &-content {
+      width: 100%;
+      color: #111010;
+      line-height: 26px;
+      letter-spacing: 0.07px;
+      padding: 0 15px;
+      height: auto;
+      max-height: 0;
+      overflow: hidden;
+      border-bottom: 0 solid transparent;
+      border-right: 1px solid #eeeeee;
+      border-left: 1px solid #eeeeee;
+      transition: $fnc-line;
+
+      @media (min-width: $xl) {
+        padding: 0 40px;
+        order: 1;
+      }
+
+      &.visible {
+        padding: 15px;
+        max-height: 400px;
+        border-bottom: 1px solid #eeeeee;
+
+        @media (min-width: $xl) {
+          padding: 40px;
+        }
+      }
+    }
+
+    .list-item {
+      margin-bottom: 4px;
+    }
+  }
+
+}
+
+
+.page-breakstone {
+  .request {
+    @media (min-width: $lg) {
+      margin-top: 70px;
+    }
+  }
+}

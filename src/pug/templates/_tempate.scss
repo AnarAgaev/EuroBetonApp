@@ -45,8 +45,11 @@ body {
   font-style: normal;
   color: $clr-font ;
   position: relative;
-  transition: $fnc-line;
   top: 0;
+
+  @media (max-width: $md - 1) {
+    transition: $fnc-line;
+  }
 
   &.phone-visible {
     top: 80px;
