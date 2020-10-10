@@ -322,17 +322,17 @@ for (let i = 0; i < btns.length; i++) {
 
 
 // Show, hide comments for product on product page
-const prodTgglr = document.querySelector(".product .description__toggler");
+const tgglr = document.querySelector(".description__toggler");
 
-if (prodTgglr) {
-  const prodTxt = prodTgglr.closest(".description");
+if (tgglr) {
+  const prodTxt = tgglr.closest(".description");
 
-  prodTgglr.addEventListener("click", () => {
+  tgglr.addEventListener("click", () => {
     prodTxt.classList.toggle("show");
 
-    prodTgglr.innerHTML === "Развернуть"
-      ? prodTgglr.innerHTML = "Свернуть"
-      : prodTgglr.innerHTML = "Развернуть";
+    tgglr.innerHTML === "Развернуть"
+      ? tgglr.innerHTML = "Свернуть"
+      : tgglr.innerHTML = "Развернуть";
   });
 }
 

@@ -1,0 +1,25 @@
+section.prices.section_container
+    .container
+        .prices__title.section_title ВАС ТАКЖЕ МОЖЕТ ЗАИНТЕРЕСОВАТЬ
+
+        .prices__link
+            a(href="/") Перейти в каталог
+
+        .prices__slider
+            .slider
+                .slider__controller.slider__controller_left(id="slider-controller-left")
+                .slider__controller.slider__controller_right(id="slider-controller-right")
+                .slider__viewport
+                    .slider__list.d-flex
+
+                        - for (let i = 0; i < 10; i++)
+                            .slider__item.d-flex.flex-column.justify-content-start.align-items-center
+                                .prices__pic(style="background-image: url('/img/prices-pump.jpg')")
+                                .prices__caption Аренда техники
+                                .prices__desc Гибкий шланг
+                                .prices__price
+                                    | от
+                                    span 558
+                                    | руб.
+                                .prices__btn
+                                    a(href="/").btn ПОДРОБНЕЕ
