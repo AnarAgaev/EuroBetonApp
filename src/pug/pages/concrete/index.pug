@@ -1,0 +1,33 @@
+//- Include used template for this page
+extends ../../templates/template
+
+//- Including mixins
+include ../../mixins/bread-crumbs/_bread-crumbs
+include ../../mixins/page-title/_page-title
+include ../../mixins/request/_requset
+include ../../mixins/promo/_promo
+
+//- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
+block variables
+    - let title       = 'Товарный бетон от производителя'
+    - let description = ''
+    - let keywords    = ''
+    - let pageClass   = 'page-concrete'
+
+block content
+    +bread-crumbs("Главная", "Производство", "Товарный бетон от производителя")
+
+    +page-title("Товарный бетон от производителя")
+
+    include _concrete
+
+    +request(
+      'modalSetOrder',
+      'request-men',
+      'request-men.png',
+      'ПОЛУЧИТЬ РАСЧЕТ СТОИМОСТИ',
+      'Наш менеджер поможет Вам с выбором и рассчитает цену бетона с доставкой',
+      'оставить заявку'
+    )
+
+    +promo

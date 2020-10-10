@@ -373,11 +373,19 @@ const pics = document.querySelectorAll(".sml-img-slider__item");
         const after = el.nextElementSibling;
         const parent = el.parentElement;
 
-        before.classList.remove("front");
-        el.classList.remove("back");
-        el.classList.add("front");
-        after.classList.add("back");
-        parent.append(before);
+        if (after) {
+          before.classList.remove("front");
+          el.classList.remove("back");
+          el.classList.add("front");
+          after.classList.add("back");
+          parent.append(before);
+        } else {
+          before.classList.remove("front");
+          before.classList.add("back");
+          el.classList.remove("back");
+          el.classList.add("front");
+          parent.append(before);
+        }
       }
     });
   }

@@ -4,6 +4,7 @@
   &__list {
     width: 300px;
     height: 208px;
+    max-width: 100%;
     overflow: hidden;
     position: relative;
 
@@ -18,31 +19,23 @@
     //height: 232px;
     width: 89%;
     height: 86%;
-
     position: absolute;
     top: 38px;
-    left: 44px;
-    opacity: 0;
-    z-index: 1;
     cursor: pointer;
     transition: $fnc-line;
+    z-index: 0;
 
     &.front {
-      opacity: 1;
-      z-index: 3;
       top: 0;
-      left: 0;
-      bottom: auto;
-      right: auto;
+      z-index: 10;
 
       a {
-        box-shadow: inset 0 0 0 150px rgba(255,255,255,0);
+        box-shadow: inset 0 0 0 0 rgba(255,255,255,0);
       }
     }
 
     &.back {
-      opacity: 1;
-      z-index: 2;
+      z-index: 5;
 
       &::after {
         content: "";
@@ -66,8 +59,30 @@
       background-position: center;
       background-size: cover;
       box-shadow: inset 0 0 0 150px rgba(255,255,255,0.65);
-      transition: $fnc-line;
+      transition: box-shadow .7s;
     }
+}
 
+.right-side {
+  .sml-img-slider {
+    &__item {
+      left:44px;
 
+      &.front {
+        left: 0;
+      }
+    }
+  }
+}
+
+.left-side {
+  .sml-img-slider {
+    &__item {
+      left: 0;
+
+      &.front {
+        left: 44px;
+      }
+    }
+  }
 }
