@@ -1,0 +1,59 @@
+//- Include used template for this page
+extends ../../templates/template
+
+//- Including mixins
+include ../../mixins/bread-crumbs/_bread-crumbs
+include ../../mixins/page-title/_page-title
+include ../../mixins/request/_requset
+include ../../mixins/promo/_promo
+include ../../mixins/news-list/_news-list
+include ../../mixins/get-more/get-more
+include ../../mixins/advantages/_advantages
+
+
+//- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
+block variables
+    - let title       = 'Щебень и их виды'
+    - let description = ''
+    - let keywords    = ''
+    - let pageClass   = 'page-catalog-rubble'
+
+block content
+    +bread-crumbs("Главная", "Продукция", "Щебень")
+
+    +page-title("Щебень и их виды")
+
+    include _catalog-rubble
+
+    +get-more("page-catalog", "Загрузить ещё товары")
+
+    +request(
+      '',
+      'request-crane',
+      'request-crane.png',
+      'АРЕНДА СПЕЦТЕХНИКИ',
+      'Аренда бетононасосов и кранов в Москве и Московской области',
+      'подробнее'
+    )
+
+
+
+
+
+    +advantages(
+      ["", "advantages-5.png", "Непрерывный процесс производства"],
+      ["px-5", "advantages-6.png", "Широчайший ассортимент"],
+      ["px-5", "advantages-7.png", "Высокий уровень сервиса"],
+      ["px-5", "advantages-8.png", "Вся продукция сертифицирована"])
+
+    +promo
+
+    .container
+        .all-news
+            a(href="") Все новости
+
+    +news-list(
+      ['news1.jpg', '05 Сентября 2019', 'Противоморозные добавки в бетон'],
+      ['news2.jpg', '30 Августа 2019', 'Цементное молочко'],
+      ['news3.jpg', '02 Августа 2019', 'Бетон в дизайне',],
+      ['news4.jpg', '17 Июня  2019', 'Фундаменты и их виды'])

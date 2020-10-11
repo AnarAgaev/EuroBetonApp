@@ -1,0 +1,35 @@
+//- Include used template for this page
+extends ../../templates/template
+
+//- Including mixins
+include ../../mixins/bread-crumbs/_bread-crumbs
+include ../../mixins/page-title/_page-title
+include ../../mixins/request/_requset
+include ../../mixins/advantages/_advantages
+include ../../mixins/promo/_promo
+
+//- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
+block variables
+    - let title       = 'Гранитный щебень 5-20'
+    - let description = ''
+    - let keywords    = ''
+    - let pageClass   = 'page-product-rubble'
+
+block content
+    +bread-crumbs("Главная", "Продукция", "Щебень", "Гранитный щебень 5-20")
+
+    +page-title("Гранитный щебень 5-20")
+
+    include _product-rubble
+
+    include ../../mixins/prices/_prices-rubble
+
+    +request('', 'request-lab', 'request-lab.png', 'СОБСТВЕННАЯ ЛАБОРАТОРИЯ', 'Наша лаборатория предоставляет широкий спектр лабораторного сопровождения объектов строительства.', 'узнать больше')
+
+    +advantages(
+      ["", "advantages-5.png", "Непрерывный процесс производства"],
+      ["px-5", "advantages-6.png", "Широчайший ассортимент"],
+      ["px-5", "advantages-7.png", "Высокий уровень сервиса"],
+      ["px-5", "advantages-8.png", "Вся продукция сертифицирована"])
+
+    +promo
