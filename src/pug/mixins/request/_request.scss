@@ -8,11 +8,11 @@
 
   @media (min-width: $md) {
     padding: 73px 0 0;
-    overflow-y: visible;
   }
 
   @media (min-width: $lg) {
     overflow-x: initial;
+    overflow-y: visible;
   }
 
   &__desc {

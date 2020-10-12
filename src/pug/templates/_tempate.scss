@@ -76,16 +76,16 @@ ul, li {
   display: flex;
 
   &-item::before {
-      content: "";
-      display: inline-block;
-      width: 3px;
-      height: 3px;
-      position: relative;
-      border-radius: 50%;
-      background-color: $clr-accent;
-      margin-right: 6px;
-      top: -4px;
-    }
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    position: relative;
+    border-radius: 50%;
+    background-color: $clr-accent;
+    margin-right: 6px;
+    top: -4px;
+  }
 }
 
 
@@ -426,4 +426,20 @@ blockquote.blockquote,
     margin: 0;
     padding: 0;
   }
+}
+
+
+.footnote {
+  line-height: 26px;
+  letter-spacing: 0.07px;
+
+  &::before {
+    content: "*";
+    display: inline-block;
+    position: relative;
+    margin-right: 3px;
+    color: $clr-accent;
+  }
+
+
 }

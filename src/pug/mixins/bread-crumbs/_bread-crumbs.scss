@@ -22,8 +22,12 @@
       color: #353535;
     }
 
-    &:last-child::after {
-      display: none;
+    &:last-child {
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
     }
   }
 

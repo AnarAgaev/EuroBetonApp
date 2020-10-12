@@ -1,0 +1,46 @@
+//- Include used template for this page
+extends ../../templates/template
+
+//- Including mixins
+include ../../mixins/bread-crumbs/_bread-crumbs
+include ../../mixins/page-title/_page-title
+include ../../mixins/request/_requset
+include ../../mixins/advantages/_advantages
+include ../../mixins/promo/_promo
+
+//- VARIABLES FOR INCLUDE THIS IN USED TEMPLATE
+block variables
+    - let title       = 'Минеральный порошок'
+    - let description = ''
+    - let keywords    = ''
+    - let pageClass   = 'page-mineral-powder'
+
+block content
+    +bread-crumbs("Главная", "Продукция", "Минеральный порошок")
+
+    +page-title("Минеральный порошок")
+
+    include _mineral-powder
+
+    include ../../../pug/mixins/interesting-product/interesting-product
+
+    +request('', 'request-lab', 'request-lab.png', 'СОБСТВЕННАЯ ЛАБОРАТОРИЯ', 'Наша лаборатория предоставляет широкий спектр лабораторного сопровождения объектов строительства.', 'узнать больше')
+
+    include ../../../pug/mixins/buy-from-us/_buy-from-us
+
+    .container.section_container
+        .row
+            .col-12
+                blockquote.blockquote
+                    p
+                        | Мы - Ваш надежный партнер на долгие годы.
+                        br
+                        | Все наши клиенты могут всегда рассчитывать на помощь и поддержку с нашей стороны.
+
+    +advantages(
+      ["", "advantages-5.png", "Непрерывный процесс производства"],
+      ["px-5", "advantages-6.png", "Широчайший ассортимент"],
+      ["px-5", "advantages-7.png", "Высокий уровень сервиса"],
+      ["px-5", "advantages-8.png", "Вся продукция сертифицирована"])
+
+    +promo

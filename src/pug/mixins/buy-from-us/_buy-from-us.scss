@@ -1,0 +1,51 @@
+@import "../../../scss/variables";
+
+.buy-from-us {
+
+  &__title {
+    margin-bottom: 27px;
+    padding-top: 0;
+
+    @media (min-width: $md) {
+      margin-bottom: 44px;
+      //padding-top: 12px;
+    }
+  }
+
+  &__list {
+
+    &.second {
+      padding-top: 9px;
+
+      @media (min-width: $xl) {
+        margin-left: 35px;
+        padding-top: 0;
+      }
+
+      @media (min-width: $xxl) {
+        margin-left: 55px;
+      }
+    }
+  }
+
+  &__item {
+    color: #353535;
+    line-height: 26px;
+    padding: 9px 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    img {
+      margin: 0 20px 0 0;
+    }
+  }
+
+  &__pic {
+    @media (max-width: $xl) {
+      order: 1;
+      margin-top: 30px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@import "../../../scss/variables";
+
+.interesting-product {
+  @media (min-width: $lg) {
+    margin-bottom: 75px;
+  }
+
+  &__title{
+    margin-bottom: 30px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 50px;
+      padding-top: 20px;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    max-width: 975px;
+    border: 2px solid #e3e3e3;
+    margin: 0 auto;
+    padding: 20px 15px 30px;
+
+    @media (min-width: $lg) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__pic {
+    @media (min-width: $lg) {
+      width: 50%;
+    }
+  }
+
+  &__content {
+    @media (min-width: $lg) {
+      width: 50%;
+      padding-left: 28px;
+    }
+  }
+
+  &__caption {
+    font-family: $fnt-secondary;
+    font-size: 32px;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 26px;
+    margin-top: 30px;
+    text-align: center;
+
+    @media (min-width: $md) {
+      font-size: 42px;
+    }
+
+    @media (min-width: $lg) {
+      text-align: left;
+      margin-top: 10px;
+    }
+  }
+
+  &__txt {
+    margin-bottom: 25px;
+
+    li {
+      line-height: 28px;
+    }
+
+    &-title {
+      line-height: 21px;
+      font-weight: 500;
+      font-style: normal;
+      letter-spacing: 0.07px;
+      margin-top: 25px;
+    }
+  }
+
+  &__btn a {
+    width: 209px;
+    height: 53px;
+    color: #000;
+    background-color: #eeeeee;
+    font-weight: 300;
+    line-height: 53px;
+    padding: 0;
+    text-align: center;
+    box-shadow: none;
+    background-image: none;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
