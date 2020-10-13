@@ -451,10 +451,10 @@ if (document.getElementById("map")) {
         // Порядок по умолчанию: «широта, долгота».
         // Чтобы не определять координаты центра карты вручную,
         // воспользуйтесь инструментом Определение координат.
-        center: [55.736772829291304,37.62130049999999],
+        center: [55.38046857198313,41.687034406250014],
         // Уровень масштабирования. Допустимые значения:
         // от 0 (весь мир) до 19.
-        zoom: 5,
+        zoom: 6,
         controls: [],
       }),
 
@@ -465,9 +465,9 @@ if (document.getElementById("map")) {
         },
         {
           iconLayout: 'default#image',
-          iconImageHref: '/img/plc-kstovo.png',
-          iconImageSize: [185, 43],
-          iconImageOffset: [-16, -43]
+          iconImageHref: '/img/mark.png',
+          iconImageSize: [36, 43],
+          iconImageOffset: [-15, -43]
         }),
 
       myPlacemarkLipetsk = new ymaps.Placemark([52.60358425779388,39.59623749999995],
@@ -477,9 +477,9 @@ if (document.getElementById("map")) {
         },
         {
           iconLayout: 'default#image',
-          iconImageHref: '/img/plc-lipeck.png',
-          iconImageSize: [185, 43],
-          iconImageOffset: [-16, -43]
+          iconImageHref: '/img/mark.png',
+          iconImageSize: [36, 43],
+          iconImageOffset: [-15, -43]
         }),
 
       myPlacemarkGranitstroy = new ymaps.Placemark([56.00991906873449,37.436966],
@@ -489,9 +489,9 @@ if (document.getElementById("map")) {
         },
         {
           iconLayout: 'default#image',
-          iconImageHref: '/img/plc-granitstroy.png',
-          iconImageSize: [154, 43],
-          iconImageOffset: [-16, -43]
+          iconImageHref: '/img/mark.png',
+          iconImageSize: [36, 43],
+          iconImageOffset: [-15, -43]
         }),
 
       myPlacemarkStroyRegion = new ymaps.Placemark([56.86988406782098,60.59384549999995],
@@ -501,9 +501,9 @@ if (document.getElementById("map")) {
         },
         {
           iconLayout: 'default#image',
-          iconImageHref: '/img/plc-stroy-region.png',
-          iconImageSize: [255, 43],
-          iconImageOffset: [-16, -43]
+          iconImageHref: '/img/mark.png',
+          iconImageSize: [36, 43],
+          iconImageOffset: [-15, -43]
         }),
 
       myPlacemarkEvrobeton = new ymaps.Placemark([55.77380806896347,37.50681899999997],
@@ -513,9 +513,9 @@ if (document.getElementById("map")) {
         },
         {
           iconLayout: 'default#image',
-          iconImageHref: '/img/plc-asfaltobeton.png',
-          iconImageSize: [199, 43],
-          iconImageOffset: [-16, -43]
+          iconImageHref: '/img/mark.png',
+          iconImageSize: [36, 43],
+          iconImageOffset: [-15, -43]
         }),
 
       myPlacemarkMedvedkovo = new ymaps.Placemark([55.88525156886214,37.62130049999999],
@@ -525,9 +525,9 @@ if (document.getElementById("map")) {
         },
         {
           iconLayout: 'default#image',
-          iconImageHref: '/img/plc-medvedkovo.png',
-          iconImageSize: [197, 43],
-          iconImageOffset: [-16, -43]
+          iconImageHref: '/img/mark.png',
+          iconImageSize: [36, 43],
+          iconImageOffset: [-15, -43]
         });
 
     myMap.geoObjects
@@ -545,4 +545,4 @@ if (document.getElementById("map")) {
     myMap.behaviors.disable('scrollZoom');
   }
 }
-// ***Янадекс нары -- Конец
+// ***Янадекс карты -- Конец

@@ -4,9 +4,36 @@
   margin-bottom: 57px;
 
   &__title {
-    margin-top: 25px;
-    font-size: 24px;
-    line-height: 42px;
-    font-weight: 700;
+    margin-bottom: 15px;
+
+    @media (min-width: $xl) {
+      text-align: left;
+    }
   }
+
+  &__pic {
+    margin-bottom: 28px;
+    margin-top: 7px;
+
+    @media (min-width: $xl) {
+      left: -18px;
+      margin-top: 12px;
+    }
+  }
+}
+
+.page-director {
+  .bread-crumbs__wrap {
+    @media (min-width: $xl) {
+      justify-content: start !important;
+    }
+  }
+
+  p {
+    margin-bottom: 25px;
+  }
+
+  //.bread-crumbs__list {
+  //  justify-content: start !important;
+  //}
 }

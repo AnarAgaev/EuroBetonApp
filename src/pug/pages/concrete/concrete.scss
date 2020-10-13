@@ -5,9 +5,16 @@
       padding-top: 12px;
     }
 
-    &:last-child .concrete__content::after {
-      display: none;
+    &:last-child .concrete__content {
+      &::after {
+        display: none;
+      }
+
+      .concrete__link {
+        margin-bottom: 30px;
+      }
     }
+
   }
 
   p {
