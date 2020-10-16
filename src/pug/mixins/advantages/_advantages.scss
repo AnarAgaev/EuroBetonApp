@@ -25,6 +25,12 @@
     z-index: 1;
   }
 
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    &::before {
+      display: none;
+    }
+  }
+
   &__pic {
     margin-bottom: 10px;
     z-index: 5;

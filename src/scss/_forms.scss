@@ -19,8 +19,8 @@
     line-height: 26px;
     background-color: #eeeeee;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    margin: 0 auto;
+    transform: translateY(-50%);
     text-align: center;
 
     @media (min-width: $md) {
@@ -33,6 +33,10 @@
   &__controls {
     border: 1px solid #c3c3c4;
     position: relative;
+  }
+
+  &__send-wrap {
+    max-width: 100%;
   }
 
   &__send-caption {

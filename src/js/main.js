@@ -177,12 +177,13 @@ document.addEventListener("DOMContentLoaded",() => {
   const headerBottomContainer = document.getElementById("headerBottomContainer");
   const headerTopNav = document.getElementById("headerTopNav");
   const nav = document.getElementById("nav");
-  const logo = document.getElementById("logo");
+  const prodContainer = document.getElementById("prodContainer");
+  const navContainer = document.getElementById("navContainer");
 
   const replaceNav = (move) => {
     if (move) {
-      logo.after(nav);
-      region.after(headerTopNav);
+      prodContainer.appendChild(nav);
+      navContainer.appendChild(headerTopNav);
     } else {
       nav.appendChild(headerTopNav);
       headerBottomContainer.prepend(nav);
@@ -436,6 +437,58 @@ for (let i = 0; i < bsBtns.length; i++) {
 
 
 
+// Using polyfills
+(function() {
+  // проверяем поддержку
+  if (!Element.prototype.closest) {
+    // реализуем
+    Element.prototype.closest = function(css) {
+      let node = this;
+
+      while (node) {
+        if (node.matches(css)) return node;
+        else node = node.parentElement;
+      }
+      return null;
+    };
+  }
+})();
+
+(function() {
+  // проверяем поддержку
+  if (!Element.prototype.matches) {
+    // определяем свойство
+    Element.prototype.matches = Element.prototype.matchesSelector ||
+      Element.prototype.webkitMatchesSelector ||
+      Element.prototype.mozMatchesSelector ||
+      Element.prototype.msMatchesSelector;
+  }
+})();
+
+// Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/prepend()/prepend().md
+(function (arr) {
+  arr.forEach(function (item) {
+    if (item.hasOwnProperty('prepend')) {
+      return;
+    }
+    Object.defineProperty(item, 'prepend', {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function prepend() {
+        let argArr = Array.prototype.slice.call(arguments),
+          docFrag = document.createDocumentFragment();
+
+        argArr.forEach(function (argItem) {
+          let isNode = argItem instanceof Node;
+          docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
+        });
+
+        this.insertBefore(docFrag, this.firstChild);
+      }
+    });
+  });
+})([Element.prototype, Document.prototype, DocumentFragment.prototype]);
 
 
 

@@ -29,7 +29,7 @@ include ../../mixins/sml-img-slider/_sml-img-slider
                     ul.laboratory__security-list.d-flex.flex-column
                         each val, key in {1: 'Сертификатами соответсвия', 2: 'Государственными нормативными документами', 3: 'Гигиеническими заключениями на продукцию', 4: 'Сопровождается документом о качестве'}
                             li.laboratory__security-item.d-flex.justify-content-start.align-items-center
-                                img(src=`img/lab-item-${key}.png`)
+                                img(src=`img/item-${key}.png` alt="" title="")
                                 | #{val}
 
             .col-xl-8
@@ -38,25 +38,25 @@ include ../../mixins/sml-img-slider/_sml-img-slider
 
                     ul.laboratory__equipment-list.d-flex.flex-wrap
                         li.laboratory__equipment-item
-                            img(src="/img/ele.png" alt="" type="")
+                            img(src="/img/ele.png" alt="" title="")
                             span Великобритания
 
                         li.laboratory__equipment-item
-                            img(src="/img/testing.png" alt="" type="")
+                            img(src="/img/testing.png" alt="" title="")
                             span Германия
 
                         li.laboratory__equipment-item
-                            img(src="/img/technotest.png" alt="" type="")
+                            img(src="/img/technotest.png" alt="" title="")
                             span Италия
 
                         li.laboratory__equipment-item
-                            img(src="/img/retsch.png" alt="" type="")
+                            img(src="/img/retsch.png" alt="" title="")
                             span Германия
 
                         li.laboratory__equipment-item
-                            img(src="/img/thermo.png" alt="" type="")
+                            img(src="/img/thermo.png" alt="" title="")
                             span Швейцария
 
                         li.laboratory__equipment-item
-                            img(src="/img/acmel.png" alt="" type="")
+                            img(src="/img/acmel.png" alt="" title="")
                             span Франция

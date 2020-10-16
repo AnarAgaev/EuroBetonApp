@@ -27,12 +27,14 @@
   }
 
   &__pic {
+    max-width: 100%;
     @media (min-width: $lg) {
       width: 50%;
     }
   }
 
   &__content {
+    max-width: 100%;
     @media (min-width: $lg) {
       width: 50%;
       padding-left: 28px;

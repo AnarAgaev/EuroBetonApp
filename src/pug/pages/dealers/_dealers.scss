@@ -25,6 +25,7 @@
       line-height: 26px;
       letter-spacing: 0.07px;
       text-align: center;
+      max-width: 100%;
 
       @media (min-width: $md) {
         width: 402px;

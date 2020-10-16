@@ -74,6 +74,7 @@ ul, li {
 .list {
   flex-direction: column;
   display: flex;
+  width: 100%;
 
   &-item::before {
     content: "";
@@ -175,13 +176,13 @@ a {
     }
 
     &_left {
-      left: -95px;
+      left: -80px;
       &::before {
         transform: translateX(-3px) translateY(-50%) rotate(45deg);
       }
     }
     &_right {
-      right: -95px;
+      right: -80px;
       &::before {
         transform: translateX(-9px) translateY(-50%) rotate(-135deg);
       }
@@ -250,6 +251,10 @@ select {
   position: relative;
   padding-right: 40px;
   cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
 }
 
 textarea {

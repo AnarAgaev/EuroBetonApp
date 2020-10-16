@@ -13,6 +13,9 @@
   }
 
   &__list {
+    @media (max-width: $sm - 1) {
+      width: 100%;
+    }
 
     &.second {
       padding-top: 9px;
@@ -32,6 +35,7 @@
     color: #353535;
     line-height: 26px;
     padding: 9px 0;
+    max-width: 100%;
 
     &:first-child {
       padding-top: 0;

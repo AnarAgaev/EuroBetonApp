@@ -1,4 +1,4 @@
-section.buy-from-us.section_container
+.buy-from-us.section_container
     .container
         .buy-from-us__title.section_title ПОЧЕМУ СТОИТ ПОКУПАТЬ У НАС?
 
@@ -8,7 +8,7 @@ section.buy-from-us.section_container
                 ul.buy-from-us__list.d-flex.flex-column.align-items-start
                     each val, key in {1: 'Оперативное заключение договоров', 2: 'Гарантированная поставка заявленных объемов', 3: 'Гарантированная поставка заявленных объемов', 4: 'Выполнение всех пожеланий заказчиков'}
                         li.buy-from-us__item.d-flex.justify-content-start.align-items-center
-                            img(src=`img/item-${key}.png`)
+                            img(src=`img/item-${key}.png` alt="")
                             | #{val}
             .col-xl-2.buy-from-us__pic
                 img(src="/img/buy-from-us.jpg" alt="" title="")
@@ -17,5 +17,5 @@ section.buy-from-us.section_container
                 ul.buy-from-us__list.second.d-flex.flex-column.align-items-start
                     each val, key in {5: 'Конкурентные цены', 6: 'Быстрая доставка автомобильным транспортом', 7: 'Особые условия для постоянных клиентов', 8: 'Решение любых вопросов'}
                         li.buy-from-us__item.d-flex.justify-content-start.align-items-center
-                            img(src=`img/item-${key}.png`)
+                            img(src=`img/item-${key}.png` alt="")
                             | #{val}

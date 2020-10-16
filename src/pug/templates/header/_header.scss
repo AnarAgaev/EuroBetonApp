@@ -80,10 +80,11 @@
       height: 10px;
       background-color: white;
       bottom: -4px;
+      left: 0;
       opacity: 0;
       transition: all .3s;
 
-      @media (min-width: $xl) {
+      @media (min-width: $xxl) {
         left: -23px;
       }
     }
@@ -149,7 +150,7 @@
       background-color: #ffffff;
       font-family: $fnt-secondary;
       padding: 0;
-
+      left: -3px;
       height: auto;
       max-height: 0;
       opacity: 0;
@@ -162,7 +163,7 @@
         padding-top: 0;
       }
 
-      @media (min-width: $xl) {
+      @media (min-width: $xxl) {
         left: -25px;
       }
     }
@@ -341,6 +342,7 @@
           width: calc(100% + 60px);
           background-color: #434245;
           margin-left: -30px;
+          overflow: hidden;
 
           @media (min-width: $xxl) {
             transition: $fnc-animation;
@@ -464,6 +466,14 @@
         left: 23px;
         transform: translateX(-50%);
       }
+    }
+  }
+
+  #navContainer,
+  #prodContainer {
+    display: none;
+    @media (min-width: $xxl) {
+      display: block;
     }
   }
 

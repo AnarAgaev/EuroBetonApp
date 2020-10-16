@@ -22,28 +22,29 @@
                         li.region__item(data-region-city="Лобня")
                             span Лобня
 
-                nav.nav#headerTopNav
-                    ul.nav__list.d-flex
-                        li.drop.nav__item.d-flex.flex-column.align-items-start
-                            a.nav__link.drop(href="/") О компании
-                            ul.company.dropdown__list.d-flex.flex-column
-                                li.dropdown__item
-                                    a.dropdown__link(href="/") Новости
-                                li.dropdown__item
-                                    a.dropdown__link(href="/") Вакансии
+                #navContainer
+                    nav.nav#headerTopNav
+                        ul.nav__list.d-flex
+                            li.drop.nav__item.d-flex.flex-column.align-items-start
+                                a.nav__link.drop(href="/") О компании
+                                ul.company.dropdown__list.d-flex.flex-column
+                                    li.dropdown__item
+                                        a.dropdown__link(href="/") Новости
+                                    li.dropdown__item
+                                        a.dropdown__link(href="/") Вакансии
 
-                        li.drop.nav__item.d-flex.align-items-center
-                            a.nav__link.drop(href="/") Продукция
-                        li.drop.nav__item.d-flex.align-items-center
-                            a.nav__link.drop(href="/") Производство
-                        li.drop.nav__item.d-flex.align-items-center
-                            a.nav__link.drop(href="/") Аренда
-                        li.nav__item.d-flex.align-items-center
-                            a.nav__link(href="/") Доставка
-                        li.nav__item.d-flex.align-items-center
-                            a.nav__link(href="/") Тендеры
-                        li.nav__item.d-flex.align-items-center
-                            a.nav__link(href="/") Контакты
+                            li.drop.nav__item.d-flex.align-items-center
+                                a.nav__link.drop(href="/") Продукция
+                            li.drop.nav__item.d-flex.align-items-center
+                                a.nav__link.drop(href="/") Производство
+                            li.drop.nav__item.d-flex.align-items-center
+                                a.nav__link.drop(href="/") Аренда
+                            li.nav__item.d-flex.align-items-center
+                                a.nav__link(href="/") Доставка
+                            li.nav__item.d-flex.align-items-center
+                                a.nav__link(href="/") Тендеры
+                            li.nav__item.d-flex.align-items-center
+                                a.nav__link(href="/") Контакты
 
 
                 .handset#headerPhoneBtn
@@ -61,59 +62,60 @@
            a.logo(href="/")#logo
                img.logo(src="/img/logo.svg" alt="главная" title="главная")
 
-           #nav.products.d-flex.flex-column
-               ul.products__list.d-flex
-                   li.drop.products__item
-                       a.products__link.drop(href="/") Бетон
-                       .products__dropdown.concrete.d-flex.justify-content-center.align-items-center
-                           ul.dropdown-list.d-flex.flex-column
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") БЕТОН М100 (В7,5)
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") БЕТОН М150 (В10)
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") БЕТОН М200 (В15)
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") БЕТОН М250 (В20)
-                           ul.dropdown-list.d-flex.flex-column
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") БЕТОН М300 (В22,5)
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") БЕТОН М350 (В25)
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") БЕТОН М400 (В30)
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") БЕТОН М450 (В35)
-                           ul.dropdown-list.d-flex.flex-column
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") БЕТОН М550 (В40)
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") БЕТОН М600 (В45)
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") БЕТОН М700 (В50)
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") БЕТОН М800 (В60)
-                           ul.dropdown-list.d-flex.flex-column
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") РАСТВОР БЕТОНА
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") ТОВАРНЫЙ БЕТОН
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") ТЯЖЕЛЫЙ БЕТОН
-                               li.dropdown__item
-                                 a.dropdown__link(href="/") ДЛЯ ФУНДАМЕНТА
+           #prodContainer
+               #nav.products.d-flex.flex-column
+                   ul.products__list.d-flex
+                       li.drop.products__item
+                           a.products__link.drop(href="/") Бетон
+                           .products__dropdown.concrete.d-flex.justify-content-center.align-items-center
+                               ul.dropdown-list.d-flex.flex-column
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") БЕТОН М100 (В7,5)
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") БЕТОН М150 (В10)
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") БЕТОН М200 (В15)
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") БЕТОН М250 (В20)
+                               ul.dropdown-list.d-flex.flex-column
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") БЕТОН М300 (В22,5)
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") БЕТОН М350 (В25)
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") БЕТОН М400 (В30)
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") БЕТОН М450 (В35)
+                               ul.dropdown-list.d-flex.flex-column
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") БЕТОН М550 (В40)
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") БЕТОН М600 (В45)
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") БЕТОН М700 (В50)
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") БЕТОН М800 (В60)
+                               ul.dropdown-list.d-flex.flex-column
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") РАСТВОР БЕТОНА
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") ТОВАРНЫЙ БЕТОН
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") ТЯЖЕЛЫЙ БЕТОН
+                                   li.dropdown__item
+                                     a.dropdown__link(href="/") ДЛЯ ФУНДАМЕНТА
 
-                   li.drop.products__item
-                       a.products__link.drop(href="/") Щебень
-                       .products__dropdown.rubble.d-flex.justify-content-center.align-items-center
-                           ul.dropdown-list.d-flex.flex-column
-                               li.dropdown__item
-                                   a.dropdown__link(href="/") Гранитный щебень
-                               li.dropdown__item
-                                   a.dropdown__link(href="/") Доломитовый щебень
+                       li.drop.products__item
+                           a.products__link.drop(href="/") Щебень
+                           .products__dropdown.rubble.d-flex.justify-content-center.align-items-center
+                               ul.dropdown-list.d-flex.flex-column
+                                   li.dropdown__item
+                                       a.dropdown__link(href="/") Гранитный щебень
+                                   li.dropdown__item
+                                       a.dropdown__link(href="/") Доломитовый щебень
 
-                   li.products__item
-                       a.products__link(href="/") Минеральный порошок
+                       li.products__item
+                           a.products__link(href="/") Минеральный порошок
 
            #operating.operating.d-flex.flex-column.align-items-center.align-items-md-end.justify-content-center
                .operating__worktime Работаем: 24/7

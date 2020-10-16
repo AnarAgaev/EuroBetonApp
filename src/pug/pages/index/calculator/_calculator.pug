@@ -1,4 +1,4 @@
-section.calculator.section_container
+.calculator.section_container
     .calculator
         .calculator__title.d-flex.align-items-center.justify-content-center РАССЧИТАТЬ ЦЕНУ БЕТОНА С ДОСТАВКОЙ
 
@@ -17,7 +17,7 @@ section.calculator.section_container
                     label.label.label_check.d-flex.align-items-center
                         span Самовывоз
                         input(type="checkbox" value="true" name="takeself" checked)
-                        .checker
+                        span.checker
 
                     label.label.label_w205
                         span Выберите завод:
@@ -56,10 +56,10 @@ section.calculator.section_container
                             span Объём (м
                                 sup 3
                                 | ):
-                            .value-checker
-                                .value-checker__btn.value-checker__btn_minus
+                            span.value-checker
+                                span.value-checker__btn.value-checker__btn_minus
                                 input(type="text" value="0" readonly)
-                                .value-checker__btn.value-checker__btn_plus
+                                span.value-checker__btn.value-checker__btn_plus
 
 
                     .group-additive
@@ -121,11 +121,11 @@ section.calculator.section_container
                                 label.label.label_check.d-flex.align-items-center
                                     span Бетононасос
                                     input(type="checkbox" value="true" name="pump" checked)
-                                    .checker
+                                    span.checker
                                 label.label.label_check.d-flex.align-items-center
                                     span Кран
                                     input(type="checkbox" value="true" name="crane")
-                                    .checker
+                                    span.checker
                         .form_comments-offer.d-flex.flex-column.align-items-center
                             .title
                                 b Набрал свыше 300 кубов?

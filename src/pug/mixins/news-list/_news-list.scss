@@ -45,13 +45,12 @@
   &__pic {
     height: 143px;
     width: 250px;
-    left: 50%;
     position: relative;
-    transform: translateX(-50%);
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     background-size: cover;
     background-position: center;
+    margin: 0 auto;
     box-shadow: 0px -8px 0px 0px rgba(238,238,238,1),
                 0px -17px 0px 0px rgba(246,246,246,1);
   }
@@ -60,6 +59,7 @@
     width: 263px;
     height: 151px;
     position: relative;
+    background-color: #eee;
 
     &::before,
     &::after {
@@ -78,6 +78,12 @@
       background-image: url("/img/news-card-back.jpg");
       opacity: 0.4;
       z-index: 1;
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      &::before {
+        display: none;
+      }
     }
 
     &::after {

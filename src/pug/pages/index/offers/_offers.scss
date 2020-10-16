@@ -58,6 +58,12 @@
       z-index: 1;
     }
 
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      &::before {
+        display: none;
+      }
+    }
+
     &:hover {
       box-shadow: 3.536px 3.536px 20px 0 rgba(0, 0, 0, 0.35);
     }
@@ -90,7 +96,7 @@
     position: relative;
 
     @media (min-width: $md) {
-      width: 305px;
+      width: 308px;
       padding-bottom: 10px;
     }
   }

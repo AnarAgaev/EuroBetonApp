@@ -64,6 +64,12 @@
       padding-right: 5px;
     }
 
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      &__parametr {
+        position: absolute;
+      }
+    }
+
     &__value {
       background: white;
       padding-left: 5px;
@@ -232,7 +238,7 @@
     }
 
     &__txt {
-
+      max-width: 100%;
       text-align: center;
       margin-bottom: 20px;
 

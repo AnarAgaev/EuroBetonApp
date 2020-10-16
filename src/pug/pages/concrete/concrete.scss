@@ -1,6 +1,6 @@
 .concrete {
 
-  section {
+  & > .container {
     &:first-child .concrete__content {
       padding-top: 12px;
     }
